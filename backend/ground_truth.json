@@ -1,0 +1,39 @@
+{
+  "evaluation_dataset": [
+    {
+      "video_id": "E4z2mH_S2Yg",
+      "queries": [
+        { "query": "Extract the navigation menu HTML structure including the class names used for the logo and nav links.", "relevant_chunks": [] },
+        { "query": "What are the CSS properties used to create the glassmorphism effect on the header?", "relevant_chunks": [] }
+      ]
+    },
+    {
+      "video_id": "ZcW_fbdWRBw",
+      "queries": [
+        { "query": "Find the code used for the 'Typed.js' initialization to create the typing effect in the home section.", "relevant_chunks": [] },
+        { "query": "What is the HTML structure for the social media icons in the home section?", "relevant_chunks": [] }
+      ]
+    },
+    {
+      "video_id": "6bZ61L1P_5k",
+      "queries": [
+        { "query": "Extract the CSS code responsible for the circular image styling in the about section.", "relevant_chunks": [] },
+        { "query": "What is the heading text and descriptive paragraph used in the 'About Me' content?", "relevant_chunks": [] }
+      ]
+    },
+    {
+      "video_id": "IwkNQb9fFUU",
+      "queries": [
+        { "query": "Extract the complete grid layout CSS for the services cards.", "relevant_chunks": [] },
+        { "query": "What are the three service titles and their corresponding icons defined in the HTML?", "relevant_chunks": [] }
+      ]
+    },
+    {
+      "video_id": "rLiJv7N1Wyo",
+      "queries": [
+        { "query": "Find the Swiper.js initialization code used to create the testimonial slider.", "relevant_chunks": [] },
+        { "query": "What is the HTML structure for a single testimonial card including the stars and user info?", "relevant_chunks": [] }
+      ]
+    }
+  ]
+}

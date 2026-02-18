@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Output
+outputs/
+
+# Docker
+*.pid
+*.pid.lock
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore downloads (except sample structure)
+downloads/
+!downloads/frames/
+!downloads/frames/.gitkeep

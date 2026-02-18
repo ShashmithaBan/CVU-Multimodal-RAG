@@ -1,0 +1,742 @@
+{
+  "video_id": "IwkNQb9fFUU",
+  "total_keyframes": 92,
+  "chunks": [
+    {
+      "index": 0,
+      "timestamp": 0.0,
+      "ocr_text": "",
+      "audio_context": "Hey there, welcome to my YouTube channel WebDev Campus. In this video series we will create this amazing modern looking personal portfolio website",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0000_0.00s.jpg",
+      "change_score": 100.0
+    },
+    {
+      "index": 1,
+      "timestamp": 19.9,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #about Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Youtul Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati: https //yt-portfolio-website4.vercel.app/#about",
+      "audio_context": "You can preview the complete website by using the link available in the description and comment section. In the previous videos we've designed the header, home and about section. You can find section wise videos and complete playlist link in the description and comments.",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0001_19.90s.jpg",
+      "change_score": 23.488997395833334
+    },
+    {
+      "index": 2,
+      "timestamp": 26.4,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #services Monica Taylor Home About Services Testimonial Contact About Me Tm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur nulla id iusto laboriosam nam: Read more https://yt-portfolio-website4.vercel app/#services",
+      "audio_context": "In the previous videos we've designed the header, home and about section. You can find section wise videos and complete playlist link in the description and comments. In this video we'll create the services section of the website. Make sure to like this video, share and subscribe to the channel for more such amazing tutorial",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0002_26.40s.jpg",
+      "change_score": 28.91623263888889
+    },
+    {
+      "index": 3,
+      "timestamp": 34.8,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #testimonials Monica Taylor Home About Services Testimonial Contact Web Development Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias UIUX Design App Development Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero dolo",
+      "audio_context": "In this video we'll create the services section of the website. Make sure to like this video, share and subscribe to the channel for more such amazing tutorial videos. Enjoy the video!",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0003_34.80s.jpg",
+      "change_score": 32.19424189814815
+    },
+    {
+      "index": 4,
+      "timestamp": 43.1,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #contact Monica Taylor Home About Services Testimonial Cpntact Testimonals Marilyn Julia Aleksa Lorem ipsum dolor, sit amet consectetur adipisicing elit Eius reiciendis consequatur officia recusandae porro at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at? Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at? ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0004_43.10s.jpg",
+      "change_score": 37.656278935185185
+    },
+    {
+      "index": 5,
+      "timestamp": 48.6,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #contact Monica Taylor Home About Services Testimonial Contact Full Name Email Address Phone Number Email Subject Your Message Send Message",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0005_48.60s.jpg",
+      "change_score": 22.889250578703702
+    },
+    {
+      "index": 6,
+      "timestamp": 54.5,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #home Monica Taylor Home About Services Testimonial Contact Contact Me Full Name Email Address Phone Number Email Subject Your Message Send Message https://yt-portfolio-website4.vercel.app/#home",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0006_54.50s.jpg",
+      "change_score": 22.427235243055556
+    },
+    {
+      "index": 7,
+      "timestamp": 56.8,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app Monica Taylor Home About Services Testimonial Contact Phone Number Email Subject Your Message 4 4 Send Message Monica Taylor AII Rights Reserved",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0007_56.80s.jpg",
+      "change_score": 46.24900173611111
+    },
+    {
+      "index": 8,
+      "timestamp": 58.1,
+      "ocr_text": "Monica Taylor Portfolio 9 yt-portfolio-website4 vercel.app #home Monica Taylor Home About Services Testimonial Contact Hello; Myself Monica Taylor And Im a Blockchain] Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati,",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0008_58.10s.jpg",
+      "change_score": 17.23783275462963
+    },
+    {
+      "index": 9,
+      "timestamp": 59.1,
+      "ocr_text": "Monica Taylor Portfolio 96 yt-portfolio-website4 vercel app/#home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Blockchain Developel Lorem ipsum dolor sit, amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati:",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0009_59.10s.jpg",
+      "change_score": 19.431452546296295
+    },
+    {
+      "index": 10,
+      "timestamp": 60.2,
+      "ocr_text": "Monica Taylor_ Portfolio yt-portfolio-website4 vercel app #home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Blockchain Developer Lorem ipsum dolor sit, amet consectetur adipisicing elit: Modi, doloremque veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati:",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0010_60.20s.jpg",
+      "change_score": 81.03111979166667
+    },
+    {
+      "index": 11,
+      "timestamp": 73.5,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercelapp #about Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Frontend Devell Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati. https //yt-portfolio-website4.vercel app/#about",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0011_73.50s.jpg",
+      "change_score": 29.633543113425926
+    },
+    {
+      "index": 12,
+      "timestamp": 79.4,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #services Monica Taylor Home About Serices Testimonial Contact About Me Fm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: Asperiores pariatur nulla id iusto laboriosam nam Read more https /lyt-portfolio-website4vercel app/#services",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0012_79.40s.jpg",
+      "change_score": 19.157834201388887
+    },
+    {
+      "index": 13,
+      "timestamp": 83.0,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel app #services Monica Taylor Home About Services Testimonial Contact Web Development UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias. Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0013_83.00s.jpg",
+      "change_score": 30.49202835648148
+    },
+    {
+      "index": 14,
+      "timestamp": 87.1,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #testimonials Monica Taylor Home About Services Testimonial Contact Web Development UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem; nemo quod recusandae officiis molestias_ Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum p",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0014_87.10s.jpg",
+      "change_score": 23.100028935185186
+    },
+    {
+      "index": 15,
+      "timestamp": 88.6,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #testimonials Monica Taylor Home About Services Testimonial Contact Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0015_88.60s.jpg",
+      "change_score": 16.22759693287037
+    },
+    {
+      "index": 16,
+      "timestamp": 89.6,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercelapp #testimonials Monica Taylor Home About Services Testimonial Contact Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at? Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0016_89.60s.jpg",
+      "change_score": 16.210872395833334
+    },
+    {
+      "index": 17,
+      "timestamp": 93.0,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel app #contact Monica Taylor Home About Services Testimonial Collact Lorem ipsum dolor; sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at? Contact Me Full Name Email Address Phone Number Email Subject https //yt-portfolio-website4.vercel app/#contact",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0017_93.00s.jpg",
+      "change_score": 16.187507233796296
+    },
+    {
+      "index": 18,
+      "timestamp": 99.4,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel app #contact Monica Taylor Home About Services Testimonial Contact Full Name Email Address Phone Number Email Subject Your Message Send Message",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0018_99.40s.jpg",
+      "change_score": 19.105201099537037
+    },
+    {
+      "index": 19,
+      "timestamp": 100.4,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel app #contact Monica Taylor Home About Services Testimonial Contact Phone Number Email Subject Iour Message Send Message Monica Taylor _ AII Rights Reserved",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0019_100.40s.jpg",
+      "change_score": 17.205736400462964
+    },
+    {
+      "index": 20,
+      "timestamp": 104.3,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel.app #home Monica Taylor Home About Services Testimonial Contact Contact Me Full Name Email Address Phone Number Email Subject Your Message https / /yt-portfolio-website4 vercel app/#home",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0020_104.30s.jpg",
+      "change_score": 17.19061053240741
+    },
+    {
+      "index": 21,
+      "timestamp": 106.4,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Tm a Blockchain Developerl Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi; doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati_",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0021_106.40s.jpg",
+      "change_score": 117.26433738425926
+    },
+    {
+      "index": 22,
+      "timestamp": 110.6,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-web_ 0 Monica Taylor Home About Service Testimd Contact Hello, Myself Monica Taylor And Im a Web Designerl Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi veritatis voluptatibus aspernatur necessitatibus earum aliqua",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0022_110.60s.jpg",
+      "change_score": 17.208195891203705
+    },
+    {
+      "index": 23,
+      "timestamp": 113.2,
+      "ocr_text": "Monica Taylor Portfolio C 0 00 yt-portfolio-web 0 Monica Taylor Hello, Myself Monica Taylor And Im a Youtubel Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremqu veritatis voluptatibus aspernatur necessitatibus earumaliquam ipsa repel",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0023_113.20s.jpg",
+      "change_score": 21.718410011574075
+    },
+    {
+      "index": 24,
+      "timestamp": 114.4,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web @ Monica Taylor Hello; Myself Monica Taylor And Im a Youtuber Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque veritatis voluptatibus aspernatur necessitatibus earum; aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati.",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0024_114.40s.jpg",
+      "change_score": 24.14113136574074
+    },
+    {
+      "index": 25,
+      "timestamp": 123.2,
+      "ocr_text": "Monica Taylor- Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor Home Aboul Servi' = Testir Hello; Myself Conta Monica Taylor And Tm a Backend Developerl veritatis voluptatibus aspernatur necessitatibus earum, aliquam Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, do iusto esse laudantium animi vitae consectetur obcaecati.",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0025_123.20s.jpg",
+      "change_score": 15.792390046296296
+    },
+    {
+      "index": 26,
+      "timestamp": 124.4,
+      "ocr_text": "Monica Taylor- Portfolio C 0 00 yt-portfolio-web _ @ Monica Taylor Hon Abo Ser Hello, Myself Monica Taylor And Im a Backend Develol Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, dolor veritatis voluptatibus aspernatur necessitatibus earum, aliquam ips? iusto esse laudantium animi vitae consectetur obcaecati: Test Coni vercelappl]",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0026_124.40s.jpg",
+      "change_score": 38.36657986111111
+    },
+    {
+      "index": 27,
+      "timestamp": 125.9,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor About Me Im a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: Asperiores pariatur nulla id iusto laboriosam nam: Read more",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0027_125.90s.jpg",
+      "change_score": 35.034830729166664
+    },
+    {
+      "index": 28,
+      "timestamp": 129.9,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ Q Monica Taylor Home About Services Testimon Contact About Me Tm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit pariatur nulla id iusto laboriosam nam Read more",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0028_129.90s.jpg",
+      "change_score": 21.74177517361111
+    },
+    {
+      "index": 29,
+      "timestamp": 131.3,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ 0 Monica Taylor Home About rvices Testimonial Contact About Me Im a Frontend Develop Lorem ipsum dolor sit amet consectetur adipi pariatur nulla id iusto laboriosam nam. Read more vercel appll",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0029_131.30s.jpg",
+      "change_score": 20.312688078703705
+    },
+    {
+      "index": 30,
+      "timestamp": 134.3,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor Web Development Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ Read More UIIUX Design Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0030_134.30s.jpg",
+      "change_score": 20.664149305555554
+    },
+    {
+      "index": 31,
+      "timestamp": 135.3,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ Read More App Development Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0031_135.30s.jpg",
+      "change_score": 16.1201171875
+    },
+    {
+      "index": 32,
+      "timestamp": 137.5,
+      "ocr_text": "Monica Taylor - Portfolio C Q 00 yt-portfolio-web. Monica Taylor Home UIIUX Design Lorem, ipsum dolor sit amet consectetur Similique blanditiis laudantium at repudia magni libero doloremque earum porro autes recusandae officiis molestias About Services Read More Testimonial Contact App Developmen Lorem; ipsum dolor sit amet consectetur Similique blanditiis laudantium at repudian magni libero doloremque earum porro autes recusandae officiis molestias Read More",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0032_137.50s.jpg",
+      "change_score": 18.703566261574075
+    },
+    {
+      "index": 33,
+      "timestamp": 138.9,
+      "ocr_text": "Monica Taylor - Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor Similique blanaltls Iaudantium ai repudlandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias. Read More App Development Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ Read More vercelappl]",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0033_138.90s.jpg",
+      "change_score": 41.88229890046296
+    },
+    {
+      "index": 34,
+      "timestamp": 140.1,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0034_140.10s.jpg",
+      "change_score": 20.262760416666666
+    },
+    {
+      "index": 35,
+      "timestamp": 141.1,
+      "ocr_text": "Monica Taylor - Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0035_141.10s.jpg",
+      "change_score": 15.392722800925926
+    },
+    {
+      "index": 36,
+      "timestamp": 142.1,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor 3 S Aleksa Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur offiffia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0036_142.10s.jpg",
+      "change_score": 17.784208622685185
+    },
+    {
+      "index": 37,
+      "timestamp": 153.4,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web. @ Monica Taylor Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at? 3 S Aleksa vercel appll",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0037_153.40s.jpg",
+      "change_score": 15.554926215277778
+    },
+    {
+      "index": 38,
+      "timestamp": 154.4,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-web: 0 Monica Taylor Hello, Myself Monica Taylor And Fm a | Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque, vereeladploluptatibus aspernatur necessitatibus earum;aliquam ipsa repellat",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0038_154.40s.jpg",
+      "change_score": 63.43727575231482
+    },
+    {
+      "index": 39,
+      "timestamp": 157.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body <html lang= en\" > 12 body 3+ Auul Jeclloii Loue Tre77\" 55 56 <section class= about id= about 57 <div class= about-content 58 <h2 class= 'heading\">About <span Me<]span></h2> 59 <h3>I'm <span Frontend Developer</span></h3> 60 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto eveniet odio rem sint 61 repellat doloribus deserunt ea voluptas, itaque nesciunt distinctio, rerum m",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0039_157.10s.jpg",
+      "change_score": 15.671260127314815
+    },
+    {
+      "index": 40,
+      "timestamp": 159.5,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body <html lang= en\" > 12 body_ 3+ AuUul eclloii coue Tr6e7 55 JLLLir5 56 <section class= about id= about 57 <div class= about-content 58 <h2 class= 'heading\">About <span Me<]span></h2> 59 <h3>I'm <span Frontend Developer< span></h3> 60 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto eveniet odio rem sint 61 repellat doloribus deserunt ea voluptas, itaque nesciunt distinctio,",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0040_159.50s.jpg",
+      "change_score": 15.000434027777779
+    },
+    {
+      "index": 41,
+      "timestamp": 188.4,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Tm a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0041_188.40s.jpg",
+      "change_score": 226.2392071759259
+    },
+    {
+      "index": 42,
+      "timestamp": 189.4,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact About Me Im a Frontend Developer Lorem ipsum dolor sit amet fonsectetur adipisicing elit: Incidunt architecto eveniet odio rem sint minus repellat doloribus des unt ea voluptas, itaque nesciunt distinctio, rerum molestiae. Read More",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0042_189.40s.jpg",
+      "change_score": 34.07550636574074
+    },
+    {
+      "index": 43,
+      "timestamp": 191.9,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact Monica Taylor Portfolio Brave indexhtml Portfolio Website Visual_ OBS 30.1.2 Profile: Untitled Scenes: USC Monica Tuylo} My Services",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0043_191.90s.jpg",
+      "change_score": 76.99448061342592
+    },
+    {
+      "index": 44,
+      "timestamp": 215.9,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0044_215.90s.jpg",
+      "change_score": 230.19763454861112
+    },
+    {
+      "index": 45,
+      "timestamp": 217.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#services services <html lang= en\" > 12 <body> 56 <section class-\"about id= about div services-container div services-box Lienenne nnef 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 <Isection> <!-- Services Section Code <section class= services id=\"services\"> <h2 class= 'heading\">My <span Services</span></h2> <div class= services-container\" > (div class= services-box <Idiv> <[div> <Isect",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0045_217.20s.jpg",
+      "change_score": 239.9134837962963
+    },
+    {
+      "index": 46,
+      "timestamp": 246.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#services services div services-container div services-box 12 56 Ileteue77 \"serres 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 ntium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos. 00 ^ 0 Ln 79, Col 222 Spaces: 4 UTF-8 CRLF HTML Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0046_246.10s.jpg",
+      "change_score": 17.87201244212963
+    },
+    {
+      "index": 47,
+      "timestamp": 269.3,
+      "ocr_text": "Monica Taylor_ Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact My Services",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0047_269.30s.jpg",
+      "change_score": 230.31003327546296
+    },
+    {
+      "index": 48,
+      "timestamp": 274.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container div services-box a.btn <html lang= en\" > 12 body JU DCCtiy 0140, 4ovut Lu 4Jv4t Mleeeue7 68 <Isection> 69 70 <!-- Services Section Code 71 72 <section class= services id=\"services 73 <h2 class-\"heading\">My <span Services</span></h2> 74 75 <div class= services-container 76 (div class= services-box\" 77 <i class= bx bx-code x/i> 78 <h3xWeb Development</h3",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0048_274.00s.jpg",
+      "change_score": 239.2215060763889
+    },
+    {
+      "index": 49,
+      "timestamp": 283.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#services services div services-container div services-box <html lang= en\" > 12 <body> JU DCtiU 1140] 4Uv4 14 4Jv4 Tar6S7 68 <Isection> J lrtlereE 69 70 <!-- Services Section Code 71 72 <section class= services id=\"services 73 <h2 class-\"heading\">My <span Services</span></h2> 74 75 <div class= services-container 76 <div class= services-box\" 77 <i class= bx bx-code Xk/i> 78 <h3>Web Development<",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0049_283.30s.jpg",
+      "change_score": 19.14775028935185
+    },
+    {
+      "index": 50,
+      "timestamp": 284.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#services services div services-container <html lang= en\" > 12 body> DCtiU Ie4 _ 4Uv4 44 4Jv4 Saeteue77 71 J utelrer\" 72 <section class= services id-\"services 73 <h2 class= \"heading\">My <span Services< span></h2> 74 75 (div class= services-container 76 (div class= services-box 77 <i class= bx bx-code\"></i> 78 <h3xWeb Development</h3> 79 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0050_284.40s.jpg",
+      "change_score": 24.178515625
+    },
+    {
+      "index": 51,
+      "timestamp": 286.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#services services div services-container <html lang= en\" > 12 <body> <section class= services id=' services Saeteue77- 32 Lempui a cpe_itMuus a ione Velebsilaliu4s UU_Ui Lu4s auimi 636 Ilas\"1 accusaniium vufuplales Biileer5\"\" 81 dignissimos.</p> 82 <a href=\"#\" class-\"btn >Read Morek/a> E 83 <Idiv> 84 85 (div class= services-box 86 <i class= bx bx-code Xki> 87 <h3xWeb Development</h3> 88 <p>Lore",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0051_286.20s.jpg",
+      "change_score": 25.747055844907408
+    },
+    {
+      "index": 52,
+      "timestamp": 287.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#services services div services-container div services-box <html lang= en\" > 12 <body> 72 <section class= services id-\"services Maeteue77 75 <div class= services container Tsreeai 76 <div class= services-box\" Empoi FpelendLS ln cCessiGli0us 40i 100s 4um+ C0oC \"os\"1 4~c4janctam #oiuplares Lee nnen ren 81 dignissimos.< /p> 82 <a href=\"#\" class-\"btn\">Read Morek/a> 83 <Idiv> 84 85 <div class= servic",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0052_287.20s.jpg",
+      "change_score": 30.38221209490741
+    },
+    {
+      "index": 53,
+      "timestamp": 309.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#services services <html lang= en\" > 12 <body> 72 <section class= services id-\"services 75 <div class= services-container\" > 76 (div class= services-box\" div services-container div services-box ibxbx-palette Leeee nete Koreee ae Lenle L en re 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 dignissimos.</p> <a href=\"#\" class-\"btn >Read Morekla> <Idiv> <div class= 'services-box\" <1 cl",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0053_309.40s.jpg",
+      "change_score": 23.196440972222224
+    },
+    {
+      "index": 54,
+      "timestamp": 310.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#services services div services-container div services-box ibxbx-palette <html lang= en\" > 12 <body> 72 <section class= services id=' services Leeee 75 <div class= services-container Koreee ae <div class= services-box 85 16\"013 Tlnnn P' L en re 91 <a href=\"#\" class-\"btn\">Read More<]a> 92 <]div> 93 94 <div class= services-box\" 95 <i class-\"bx bx-code xk/i> 96 <h3>Web Development</h3> 97 <p>Lorem ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0054_310.60s.jpg",
+      "change_score": 18.477907986111113
+    },
+    {
+      "index": 55,
+      "timestamp": 330.1,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni ccusantium voluptates dignissimos_ Read More",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0055_330.10s.jpg",
+      "change_score": 230.1830005787037
+    },
+    {
+      "index": 56,
+      "timestamp": 339.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#services services div services-container div services-box ibxbxl-android <html lang= en\" > E 12 <body> 72 <section class= services id=' services Warer77 75 <div class= services-container\" JuLerE\" 85 (div class= 'services-box 91 <a href=\"#\" class-\"btn\">Read More<la> FTneren 92 <]div> 93 94 <div class= services-box\" 95 <i class= bx bxl-android\"></i1> 96 <h3 App Development </h3> 97 <p>Lorem ips",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0056_339.00s.jpg",
+      "change_score": 239.94963831018518
+    },
+    {
+      "index": 57,
+      "timestamp": 340.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css about-content p 216 217 218 about-content h2 { 219 text-align: left; 220 line-height: 1.2; 221 222 223 about-content h3 { 224 font-size: 3rem; 225 226 227 about-content p KL 228 font-size: 1.6rem; 229 margin: 2rem 0 3rem; 230 JBA 00^ 0 Ln 229,Col 24 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0057_340.30s.jpg",
+      "change_score": 19.763975694444444
+    },
+    {
+      "index": 58,
+      "timestamp": 350.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container div services-box ibxbxl-android 86 <1 class= bx bx-palette x/i> 87 <h3 UI/UX Design</h3> 88 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus impedit, eos ullam praesenti Aitenn dae 89 tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates Eaeerr 90 dignissimos.</p> 91 <a href=\"#\" class-\"btn\">Read ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0058_350.60s.jpg",
+      "change_score": 30.18041087962963
+    },
+    {
+      "index": 59,
+      "timestamp": 351.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container div services-box ibxbxl-android <html lang= en 12 <body> 72 <section class= services id= services 3eeeer77 75 <div class= services-container 83 <]div> 84 85 <div class= services-box\" 86 <1 class= bx bx-palette X/i> 87 <h3>UI/UX Design</h3> 88 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit Natus impedit, eos ullam praesenti 89 tempora repel",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0059_351.60s.jpg",
+      "change_score": 22.43412181712963
+    },
+    {
+      "index": 60,
+      "timestamp": 352.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container div services-box ibxbxl-android <html lang= en\" > 12 <body> 56 <section class-\"about id-\"about See66777 68 <Isection> 69 70 4l- = Services Section Code Lenenlen lren 71 72 <section class= services id-\"services 73 <h2 class= 'heading\">My <span Services<_ span></h2> 74 75 (div class= services-container 76 (div class= services-box 77 <i class-\"bx bx-code ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0060_352.60s.jpg",
+      "change_score": 20.56921296296296
+    },
+    {
+      "index": 61,
+      "timestamp": 354.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 4 216 217 218 about-content h2 { 219 text-align: left; 220 line-height: 1.2; 221 222 223 about-content h3 { 224 font-size: 3rem; 225 226 227 about-content p { 228 font-size: 1.6rem; 229 margin: 2rem 0 3rem; 230 231 232 Services Section Code */ 233 234 0 Fbant 014 0 Ln 234,Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0061_354.80s.jpg",
+      "change_score": 33.443294270833334
+    },
+    {
+      "index": 62,
+      "timestamp": 365.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services 63 <Idiv> 64 65 <div class= earete57 about-img\" 66 img src= assets/about jpeg\" alt= About Image Jpeerrrs 67 </div> UeTnE Ee 68 <Isection> 69 70 K! = [Servicesl Section Code 71 72 <section class= servicesh id= services 73 <h2 class-\"heading\" >My <span Servicesk span></h2> 74 75 <div class= services container 76 (div class= services box' 77 <i class= bx bx-code xk/i> 78 <h3>We",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0062_365.10s.jpg",
+      "change_score": 28.73939525462963
+    },
+    {
+      "index": 63,
+      "timestamp": 368.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 225 } 226 227 about-content p { 228 font-size: 1.6rem; 229 margin: 2rem 0 3rem; 230 231 232 7 + Services Section Code 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 Wbuim E Aena 014 0 Ln 238, Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0063_368.30s.jpg",
+      "change_score": 23.799385127314814
+    },
+    {
+      "index": 64,
+      "timestamp": 371.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css services-container 225 } 226 227 about-content p { 228 font-size: 1.6rem; 229 margin: 2rem 0 3rem; 230 231 232 7 + Services Section Code */ 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 services-container 239 dis 240 display font-display offset-distance text-decoration-skip text-decoration-skip-ink text-decoration-style descent-override ~moz-text-decoration-style scroll Snap destination text decorat",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0064_371.20s.jpg",
+      "change_score": 17.369907407407407
+    },
+    {
+      "index": 65,
+      "timestamp": 375.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css services-container 225 } 226 227 about-content p { 228 font-size: 1.6rem; 229 margin: 2rem 0 3rem; 230 231 232 7 + Services Section Code 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 services-container 239 display: flex; 240 justify content: center; 241 alii 242 align-items animation-timeline Ez Hb Aligns flex items along the cross axis of the current line of the flex container: (Edge 12, Firefox 20",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0065_375.80s.jpg",
+      "change_score": 15.480649594907407
+    },
+    {
+      "index": 66,
+      "timestamp": 384.7,
+      "ocr_text": "Monica Taylor_ Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor sit amet consectetur adipisicing elit_ Natus impe edit, eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni ccusantium voluptates dignissimos Read Mor I UIIUX Design Lorem ipsum dolor sit amet consectetur adipisicing elit Natus impedit, eos ullam praesentium tempora repellendus ratione necessitatibus do",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0066_384.70s.jpg",
+      "change_score": 230.21042390046296
+    },
+    {
+      "index": 67,
+      "timestamp": 387.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css services-container 225 226 227 about-content p { 228 font-size: 1.6rem; 229 margin: 2rem 3rem; 230 231 232 7 * Services Section Code 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 services-container { 239 display: flex; 240 justify-content: center; 241 align-items: center; 242 flex-wrap: wrap; 243 gap: 2rem; 244 } T Anbnan Bs T Aacnban 00^ 0 Ln 243, Col 15 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0067_387.40s.jpg",
+      "change_score": 239.21375868055554
+    },
+    {
+      "index": 68,
+      "timestamp": 394.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container 63 <Idiv> 64 65 <div class= Iruee777 about-img\" 66 <img Src= assets/about jpeg\" alt= About Image UT_ nnn 67 <Idiv> 68 <Isection> 69 70 < = Services Section Code 71 72 <section class-\"services id-\"services 73 <h2 class-\"heading\">My <span Services<_ span>< /h2> 74 75 <div class-\"pervices-container 76 (div class= services-box\" 77 <i class= bx bx-code\">k/i",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0068_394.10s.jpg",
+      "change_score": 32.17038483796296
+    },
+    {
+      "index": 69,
+      "timestamp": 397.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css %c services-container 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 services-container { 239 display: flex; 240 justify-content: center; 241 align-items: center; 242 flex-wrap: wrap; 243 gap: 2rem; 244 245 246 services-container B 34 ebn 014 0 Ln 246, Col 22 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0069_397.60s.jpg",
+      "change_score": 34.53666087962963
+    },
+    {
+      "index": 70,
+      "timestamp": 427.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css services-container services-box 233 234 services h2 { 235 margin-bottom: Srem; 236 237 238 services-container { 239 display: flex; 240 justify-content: center; 241 align-items: center; 242 flex-wrap: wrap; 243 gap: 2rem; 244 245 246 services-container services-box 247 flex: 3Orem; 248 background: var(--snd-bg-color); 249 padding: 6rem 2rem 6rem; 250 border-radius: 2rem; 251 text- align: centerl; 252 8l7 00^ 0 Ln",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0070_427.60s.jpg",
+      "change_score": 7.118258101851852
+    },
+    {
+      "index": 71,
+      "timestamp": 446.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css services-container services-box 2Jo 5i VIL6S culainci 244 245 246 services-container services box 247 flex: 1 30rem; 248 249 250 style css Portfolio Website Visual Stu:. 251 Ul 252 253 254 HbH Monica Taylor Portfolio Brave OBS 30.1.2 Profile: Untitled Scenes: Monic , Toylor My Services 00^ 0 Ln 253,Col 26 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0071_446.90s.jpg",
+      "change_score": 72.06935040509259
+    },
+    {
+      "index": 72,
+      "timestamp": 450.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez services-container services-box 2Jo s6i VILCS cuLainci 244 245 246 services-container services-box { 247 flex: 1 1 3Orem; 248 background: var(--snd-bg-color) ; 249 padding: 6rem 2rem 6rem; 250 border-radius: 2rem; 251 text-align: center; 252 border: 0.3rem solid var(--bg-color); 253 transition: 0.3s easef 254 } Ba Hb 00^ 0 Ln 253,Col 26 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0072_450.90s.jpg",
+      "change_score": 230.2759693287037
+    },
+    {
+      "index": 73,
+      "timestamp": 480.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css services-container services-boxhover 238 services-container { 2+3 sap ZiFim 244 245 246 services transform 247 flex: transition 248 backg transform-origin 249 paddi transition-duration 250 borde transition-property 251 text- transition-timing-function 252 borde transition-delay 253 trans transform-style 254 transform-box 255 transition-behavior 256 services translate 257 borde ~0-transform 258 trans 259 A two-di",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0073_480.90s.jpg",
+      "change_score": 0.03443287037037037
+    },
+    {
+      "index": 74,
+      "timestamp": 485.6,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development UIIUX Design App Development Lorem ipsum dolor, sit amet consectetur adipisicing elit_ Natus impedit; eos Ullam praesentium tempora repellendus ratione necessitatbus doloribus animi esse magni accusantium voluptates dignissimos Lorem ipsum dolor; sit amet consectetur adipisicing elit Natus impedit, eos ullam praesentium tempora repellendus ratione necessitatibus",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0074_485.60s.jpg",
+      "change_score": 230.1212673611111
+    },
+    {
+      "index": 75,
+      "timestamp": 488.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css services-container services-boxhover 238 services-container { 2+3 sap Zi\"Em _ 244 245 246 services-container services-box { 247 flex: 1 1 3Orem; 248 background: var(--snd-bg-color); 249 padding: 6rem 2rem 6rem; 250 border-radius: 2rem; 251 text- align: center; 252 border: 0.3rem solid var(--bg-color); 253 transition: 0.35 ease; 254 255 256 services-container services-box:hover { 257 border-color: var( --main-col",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0075_488.70s.jpg",
+      "change_score": 230.05559895833332
+    },
+    {
+      "index": 76,
+      "timestamp": 503.4,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development UIIUX Design App Development Lorem ipsum dolor sit amet consectetur adipisicing elit Natus impedit eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit, eos ullam praesentium tempora repellendus ratione necessitatibus ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0076_503.40s.jpg",
+      "change_score": 230.18091001157407
+    },
+    {
+      "index": 77,
+      "timestamp": 505.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css services-box i 238 services-container 2+3 gap . Zreim 244 245 246 services-container services-box { 247 flex: 1 1 3Orem; 248 background: var(--snd-bg-color); 249 padding: 6rem 2rem 6rem; 250 border-radius: 2rem; 251 text- align: center; 252 border: 0.3rem solid var(--bg-color); 253 transition: 0.35 ease; 254 255 256 services-container services-box:hover { 257 border-color: var( --main-color); 258 transform: scal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0077_505.30s.jpg",
+      "change_score": 231.50509982638889
+    },
+    {
+      "index": 78,
+      "timestamp": 532.7,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos Ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos_ UIIUX Design App Development Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessi",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0078_532.70s.jpg",
+      "change_score": 230.20341435185185
+    },
+    {
+      "index": 79,
+      "timestamp": 537.2,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos_ UIUX Design App Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit, a eos ullam praesentium tempora repellendus ratione necess",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0079_537.20s.jpg",
+      "change_score": 25.62912326388889
+    },
+    {
+      "index": 80,
+      "timestamp": 541.5,
+      "ocr_text": "Monica Taylor_ Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact Mv Servicas Monica Taylor Portfolio Brave style.css Portfolio Website Visual Stu__. OBS 30.1.2 Profile: Untitled Scenes: Daco Monic, Toylor My Services Mie=onen MAUL? Fa eeioen ucluui LC vuiupiue LCO 4ly WJoudo ccdodd viupiulco uiyimiooiiu GadOt uupiuiso 4ly Voouaco Read More Read More Read More",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0080_541.50s.jpg",
+      "change_score": 79.59305555555555
+    },
+    {
+      "index": 81,
+      "timestamp": 542.5,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#services services div services-container div services-box 63 </div> 64 65 <div class= Iaree77 about-img\" 66 <img Src= assets/about jpeg\" alt= About Image OEReRnE 67 </div> 68 <Isection> 69 70 < = Services Section Code 71 72 <section class-\"services id-\"services 73 <h2 class-\"heading\">My <span Services<_ span></h2> 74 75 <div class= services-container 76 <div class-\"pervices-box' 77 <i class= ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0081_542.50s.jpg",
+      "change_score": 29.655555555555555
+    },
+    {
+      "index": 82,
+      "timestamp": 548.7,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos_ UIIUX Design App Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necess",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0082_548.70s.jpg",
+      "change_score": 230.28666811342592
+    },
+    {
+      "index": 83,
+      "timestamp": 551.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.csS Ez services-box p ZJI LCiL a116\"1. cenc 252 border: 0.3rem solid var(--bg-color); 253 transition: 0.35 ease; 254 255 256 services-container services-box:hover { 257 border-color: var( --main-color); 258 transform: scale(1.02) ; 259 260 261 services-box 1 { 262 font-size: Trem; 263 color: var( --main-color); 264 265 266 services-box h3 { 267 font-size: 2.6rem; 268 269 270 services-box p { 271 font-size: 1.6rem; 2",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0083_551.00s.jpg",
+      "change_score": 28.928284143518518
+    },
+    {
+      "index": 84,
+      "timestamp": 554.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css services-box p 218 about-content h2 { 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 line-height 1.2; E Aabn style.css Portfolio Website Visual Stu _ Monica Taylor Portfolio Brave OBS 30.1.2 Profile: Untitled Scenes: Monics Toykor My Services ned Dernn MeTEAn services-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2r",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0084_554.40s.jpg",
+      "change_score": 71.71370804398148
+    },
+    {
+      "index": 85,
+      "timestamp": 556.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website inllexhtml X style.css scriptjs indexhtml html body section#services services hzheading 63 <Idiv> 64 65 <div class= Eeeee6777 about-img\" 66 <img src-\"assets/about. jpeg' alt= About Image Fielt_erate 67 </div> 68 <Isection> 69 70 <e= Services Section Code 71 72 <section class= services id-\"services 73 <h2 class-\"headingh\" >My <span Services< span></h2> 74 75 <div class= services-container 76 (div class= services-box\" 77 <i class= bx bx-code xk/i> 78 <",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0085_556.00s.jpg",
+      "change_score": 25.144480613425927
+    },
+    {
+      "index": 86,
+      "timestamp": 559.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml Ityle.csS scriptjs style.css services-box p 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 text-align: left; line-height: 1.2; about-content h3 { font-size: 3rem; about-content p { font-size: 1.6rem; margin: 2rem 0 3rem; Services Section Code services h2 { margin-bottom: Srem; services-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; 0 ^",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0086_559.00s.jpg",
+      "change_score": 25.383543113425926
+    },
+    {
+      "index": 87,
+      "timestamp": 564.6,
+      "ocr_text": "Monica Taylor Portfolio 127.0.0.1.5500/indexhtml#home Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos. UIIUX Design App Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit, a eos ullam praesentium tempora repellendus ratione necessi",
+      "audio_context": "",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0087_564.60s.jpg",
+      "change_score": 230.1259403935185
+    },
+    {
+      "index": 88,
+      "timestamp": 568.9,
+      "ocr_text": "Monica Taylor_ Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact My Servicesh Web Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos_ UIUX Design App Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione neces",
+      "audio_context": "Thanks for watching the video till the end.",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0088_568.90s.jpg",
+      "change_score": 33.980815972222224
+    },
+    {
+      "index": 89,
+      "timestamp": 581.4,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#about Monica Taylor Home Abqut Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal 127.0.0.1.5500/indexhtml#about",
+      "audio_context": "If you enjoyed the video make sure to like this video, share and subscribe to the channel for more such amazing tutorial videos. You can preview the complete website by using the link available in the description and comment section. You can find section wise videos and complete playlist link in the description and comments.",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0089_581.40s.jpg",
+      "change_score": 23.596600115740742
+    },
+    {
+      "index": 90,
+      "timestamp": 585.7,
+      "ocr_text": "Monica Taylor- Portfolio 127.0.0.1.5500/indexhtml#tservices Monica Taylor Home About Services Testimonial Contact About Me 'm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto eveniet odio rem sint minus repellat doloribus deserunt ea voluptas, itaque nesciunt distinctio, rerum molestiae. Read More 127.0.0.1.5500/indexhtml#services",
+      "audio_context": "You can preview the complete website by using the link available in the description and comment section. You can find section wise videos and complete playlist link in the description and comments. I will see you in the next video till then take care and goodbye.",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0090_585.70s.jpg",
+      "change_score": 19.331105324074073
+    },
+    {
+      "index": 91,
+      "timestamp": 593.5,
+      "ocr_text": "Monica Taylor_ Portfolio 127.0.0.1.5500/indexhtml#thome Monica Taylor Home About Services Testimonial Contact My Services Web Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necessitatibus doloribus animi esse magni accusantium voluptates dignissimos UIIUX Design App Development Lorem ipsum dolor; sit amet consectetur adipisicing elit. Natus impedit; a eos ullam praesentium tempora repellendus ratione necess",
+      "audio_context": "You can find section wise videos and complete playlist link in the description and comments. I will see you in the next video till then take care and goodbye.",
+      "frame_path": "downloads/frames/IwkNQb9fFUU/keyframe_0091_593.50s.jpg",
+      "change_score": 27.70050636574074
+    }
+  ]
+}

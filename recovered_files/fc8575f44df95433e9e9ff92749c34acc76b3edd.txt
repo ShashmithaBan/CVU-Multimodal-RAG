@@ -1,0 +1,18 @@
+# requirements.txt
+Flask
+Flask-CORS
+openai-whisper
+yt-dlp
+ffmpeg-python # required for yt-dlp and general audio handling
+torch
+numpy
+opencv-python
+pytesseract
+python-Levenshtein
+ftfy
+regex
+tqdm
+open-clip-torch
+faiss-cpu
+Pillow
+google-generativeai

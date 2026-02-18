@@ -1,0 +1,10 @@
+/Users/shashmithabandara/Desktop/Uni/4th year/Research/MyResearch/Development/code/backend/venv/lib/python3.13/site-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'openai' (quick_gelu=True).
+  warnings.warn(
+Loading Whisper model...
+Whisper model loaded.
+Loading CLIP model...
+CLIP model loaded.
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 5001 is in use by another program. Either identify and stop that program, or start the server with a different port.

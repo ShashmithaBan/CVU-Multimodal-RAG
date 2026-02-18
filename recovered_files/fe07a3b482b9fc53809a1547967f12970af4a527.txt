@@ -1,0 +1,534 @@
+import os
+import re
+import cv2
+import pytesseract
+import whisper
+import yt_dlp
+import Levenshtein
+import numpy as np
+import json
+import torch
+import clip
+from PIL import Image
+from flask import Flask, request, jsonify, Response, stream_with_context
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+# Configuration
+UPLOAD_FOLDER = 'downloads'
+OUTPUT_FOLDER = 'outputs'
+FRAMES_FOLDER = os.path.join(UPLOAD_FOLDER, 'frames')
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+os.makedirs(FRAMES_FOLDER, exist_ok=True)
+
+# Initialize Whisper Model (Load once)
+print("Loading Whisper model...")
+model = whisper.load_model("base")
+print("Whisper model loaded.")
+
+# Initialize CLIP Model
+print("Loading CLIP model...")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+clip_model, clip_preprocess = clip.load("ViT-B/32", device=device)
+print("CLIP model loaded.")
+
+# ============================================================================
+# KEYFRAME ALIGNMENT CONFIGURATION
+# ============================================================================
+SCENE_CHANGE_THRESHOLD = 30.0  # Sensitivity for detecting visual changes
+AUDIO_WINDOW_SECONDS = 5.0     # Seconds before/after keyframe to capture audio
+MIN_KEYFRAME_INTERVAL = 1.0    # Minimum seconds between keyframes (debounce)
+
+
+def download_video(url):
+    """Downloads video using yt-dlp and returns the filename."""
+    ydl_opts = {
+        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        'outtmpl': os.path.join(UPLOAD_FOLDER, '%(id)s.%(ext)s'),
+        'noplaylist': True,
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info_dict = ydl.extract_info(url, download=True)
+        video_id = info_dict.get("id", None)
+        ext = info_dict.get("ext", "mp4")
+        filename = f"{video_id}.{ext}"
+        return os.path.join(UPLOAD_FOLDER, filename), video_id
+
+
+def process_audio_with_timestamps(video_path):
+    """
+    Extracts and transcribes audio using Whisper WITH word-level timestamps.
+    This is essential for keyframe alignment.
+    """
+    print(f"Transcribing audio with timestamps from {video_path}...")
+    result = model.transcribe(video_path, word_timestamps=True)
+    
+    # Extract segments with timestamps
+    segments = []
+    for segment in result.get("segments", []):
+        segments.append({
+            'start': segment['start'],
+            'end': segment['end'],
+            'text': segment['text'].strip()
+        })
+    
+    full_text = result["text"]
+    return full_text, segments
+
+
+def clean_text(text):
+    """Basic syntax filtering to remove noise."""
+    text = re.sub(r'[^\x00-\x7F]+', ' ', text)
+    text = re.sub(r'(Show UI|Show Ul|Subscribe|Share|Download)', '', text, flags=re.IGNORECASE)
+    
+    lines = text.split('\n')
+    cleaned_lines = []
+    for line in lines:
+        line = line.strip()
+        if len(line) < 3:
+            continue
+        alnum_count = sum(c.isalnum() or c.isspace() for c in line)
+        if (alnum_count / len(line)) > 0.6:
+            cleaned_lines.append(line)
+    
+    text = " ".join(cleaned_lines)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def perform_ocr_on_frame(frame):
+    """
+    Performs OCR on a single frame with preprocessing optimizations.
+    """
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # Denoise
+    gray = cv2.fastNlMeansDenoising(gray, None, 30, 7, 21)
+    
+    # Invert if dark background
+    if np.mean(gray) < 127:
+        gray = cv2.bitwise_not(gray)
+    
+    # Upscale for better OCR
+    gray = cv2.resize(gray, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+    
+    # Adaptive thresholding
+    thresh = cv2.adaptiveThreshold(
+        gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY, 21, 10
+    )
+    
+    # Morphological dilation
+    kernel = np.ones((2, 2), np.uint8)
+    thresh = cv2.dilate(thresh, kernel, iterations=1)
+    
+    # OCR
+    custom_config = r'--oem 3 --psm 6'
+    raw_text = pytesseract.image_to_string(thresh, config=custom_config)
+    return clean_text(raw_text)
+
+
+def detect_keyframes(video_path, threshold=SCENE_CHANGE_THRESHOLD):
+    """
+    DYNAMIC ANCHORING: Detects significant visual changes to find 'Anchor Timestamps' (T_scene).
+    
+    Instead of fixed-rate sampling (every 2 seconds), this detects when the 
+    video actually changes (slide flip, new code block, scroll, etc.)
+    
+    Returns:
+        List of keyframe dictionaries with timestamp, frame, and change_score
+    """
+    print(f"Detecting keyframes with threshold={threshold}...")
+    cap = cv2.VideoCapture(video_path)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    duration = total_frames / fps
+    
+    keyframes = []
+    last_frame_gray = None
+    last_keyframe_time = -MIN_KEYFRAME_INTERVAL  # Allow first frame
+    frame_count = 0
+    
+    # Sample every few frames for efficiency (not every single frame)
+    sample_interval = max(1, int(fps / 10))  # ~10 samples per second
+    
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        if frame_count % sample_interval == 0:
+            timestamp = frame_count / fps
+            
+            # Convert to grayscale and blur for comparison
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            gray_blur = cv2.GaussianBlur(gray, (21, 21), 0)
+            
+            if last_frame_gray is not None:
+                # Calculate absolute difference
+                frame_delta = cv2.absdiff(last_frame_gray, gray_blur)
+                thresh = cv2.threshold(frame_delta, 25, 255, cv2.THRESH_BINARY)[1]
+                
+                # Calculate change score (percentage of changed pixels)
+                change_score = (np.sum(thresh) / thresh.size)
+                
+                # Check if this is a significant change AND enough time has passed
+                if change_score > threshold and (timestamp - last_keyframe_time) >= MIN_KEYFRAME_INTERVAL:
+                    keyframes.append({
+                        'timestamp': timestamp,
+                        'frame': frame.copy(),
+                        'change_score': change_score,
+                        'frame_number': frame_count
+                    })
+                    last_keyframe_time = timestamp
+                    print(f"  ⚡ Keyframe at {timestamp:.2f}s (change: {change_score:.1f})")
+            else:
+                # First frame is always a keyframe
+                keyframes.append({
+                    'timestamp': 0.0,
+                    'frame': frame.copy(),
+                    'change_score': 100.0,
+                    'frame_number': 0
+                })
+                last_keyframe_time = 0.0
+                print(f"  ⚡ Keyframe at 0.00s (first frame)")
+            
+            last_frame_gray = gray_blur
+        
+        frame_count += 1
+    
+    cap.release()
+    print(f"Detected {len(keyframes)} keyframes from {duration:.1f}s video")
+    return keyframes
+
+
+def gather_audio_context(timestamp, transcript_segments, window_seconds=AUDIO_WINDOW_SECONDS):
+    """
+    TEMPORAL WINDOWING: Gathers audio text from a window around the keyframe timestamp.
+    
+    This ensures the speaker's explanation is synchronized with the visual content.
+    
+    Args:
+        timestamp: The anchor timestamp (T_scene)
+        transcript_segments: List of {'start', 'end', 'text'} from Whisper
+        window_seconds: How many seconds before/after to include
+    
+    Returns:
+        Concatenated audio text from the time window
+    """
+    start_window = max(0, timestamp - window_seconds)
+    end_window = timestamp + window_seconds
+    
+    relevant_text = []
+    for seg in transcript_segments:
+        # Include segment if it overlaps with our window
+        if seg['end'] >= start_window and seg['start'] <= end_window:
+            relevant_text.append(seg['text'])
+    
+    return " ".join(relevant_text)
+
+
+def create_chunk_vector(frame, ocr_text, audio_context):
+    """
+    Creates a 1024D multimodal vector for a single chunk.
+    
+    Vector composition:
+        - [0:512]: CLIP text embedding (OCR + audio context)
+        - [512:1024]: CLIP visual embedding (keyframe image)
+    """
+    # Combine text sources for semantic encoding
+    combined_text = f"{audio_context} {ocr_text}".strip()
+    
+    # Text encoding
+    if combined_text:
+        text_inputs = clip.tokenize([combined_text[:300]], truncate=True).to(device)
+        with torch.no_grad():
+            text_features = clip_model.encode_text(text_inputs)
+            text_features /= text_features.norm(dim=-1, keepdim=True)
+    else:
+        text_features = torch.zeros(1, 512).to(device)
+    
+    # Visual encoding
+    pil_image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+    image_input = clip_preprocess(pil_image).unsqueeze(0).to(device)
+    with torch.no_grad():
+        visual_features = clip_model.encode_image(image_input)
+        visual_features /= visual_features.norm(dim=-1, keepdim=True)
+    
+    # Concatenate to form 1024D vector
+    multimodal_vector = torch.cat((text_features, visual_features), dim=1)
+    
+    return multimodal_vector.cpu().numpy()
+
+
+def process_keyframe_aligned(video_path, video_id):
+    """
+    COMPLETE KEYFRAME-ALIGNED PIPELINE
+    
+    Flow:
+        1. Detect keyframes (dynamic scene changes)
+        2. Transcribe audio with timestamps
+        3. For each keyframe:
+           a. Extract OCR text
+           b. Gather temporally-aligned audio context
+           c. Create 1024D multimodal vector
+        4. Save all outputs
+    
+    Returns:
+        Dictionary containing all processed chunks and metadata
+    """
+    print("\n" + "="*60)
+    print("KEYFRAME-ALIGNED MULTIMODAL EXTRACTION")
+    print("="*60 + "\n")
+    
+    # Step 1: Detect keyframes
+    print("[1/4] Detecting scene changes...")
+    keyframes = detect_keyframes(video_path)
+    
+    # Step 2: Transcribe with timestamps
+    print("\n[2/4] Transcribing audio with timestamps...")
+    full_transcript, transcript_segments = process_audio_with_timestamps(video_path)
+    
+    # Step 3: Process each keyframe
+    print(f"\n[3/4] Processing {len(keyframes)} keyframes...")
+    chunks = []
+    all_ocr_texts = []
+    all_vectors = []
+    
+    # Create video-specific frames folder
+    video_frames_folder = os.path.join(FRAMES_FOLDER, video_id)
+    os.makedirs(video_frames_folder, exist_ok=True)
+    
+    last_ocr_text = ""
+    
+    for i, kf in enumerate(keyframes):
+        timestamp = kf['timestamp']
+        frame = kf['frame']
+        
+        print(f"  Processing keyframe {i+1}/{len(keyframes)} at {timestamp:.2f}s...")
+        
+        # OCR extraction
+        ocr_text = perform_ocr_on_frame(frame)
+        
+        # De-duplicate similar OCR (consolidation)
+        if ocr_text:
+            similarity = Levenshtein.ratio(last_ocr_text, ocr_text)
+            if similarity < 0.90:
+                all_ocr_texts.append(ocr_text)
+                last_ocr_text = ocr_text
+            elif len(ocr_text) > len(last_ocr_text):
+                # Keep longer version
+                if all_ocr_texts:
+                    all_ocr_texts[-1] = ocr_text
+                else:
+                    all_ocr_texts.append(ocr_text)
+                last_ocr_text = ocr_text
+        
+        # Gather temporally-aligned audio
+        audio_context = gather_audio_context(timestamp, transcript_segments)
+        
+        # Create multimodal vector for this chunk
+        chunk_vector = create_chunk_vector(frame, ocr_text, audio_context)
+        all_vectors.append(chunk_vector)
+        
+        # Save keyframe image
+        frame_filename = f"keyframe_{i:04d}_{timestamp:.2f}s.jpg"
+        frame_path = os.path.join(video_frames_folder, frame_filename)
+        cv2.imwrite(frame_path, frame)
+        
+        # Store chunk data
+        chunks.append({
+            'index': i,
+            'timestamp': timestamp,
+            'ocr_text': ocr_text,
+            'audio_context': audio_context,
+            'frame_path': frame_path,
+            'change_score': kf['change_score']
+        })
+    
+    # Step 4: Save outputs
+    print("\n[4/4] Saving outputs...")
+    
+    # Save audio transcript
+    audio_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_audio.txt")
+    with open(audio_file_path, "w") as f:
+        f.write(full_transcript)
+    
+    # Save consolidated visual text
+    visual_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_visual.txt")
+    with open(visual_file_path, "w") as f:
+        f.write("\n\n".join(all_ocr_texts))
+    
+    # Save individual chunk vectors (for retrieval)
+    chunks_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_chunks.npz")
+    np.savez(
+        chunks_file_path,
+        vectors=np.vstack(all_vectors),  # Shape: (num_chunks, 1024)
+        timestamps=np.array([c['timestamp'] for c in chunks])
+    )
+    
+    # Save combined/averaged multimodal vector (backward compatible)
+    if all_vectors:
+        combined_vector = np.mean(np.vstack(all_vectors), axis=0, keepdims=True)
+    else:
+        combined_vector = np.zeros((1, 1024))
+    vector_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_multimodal_vector.npy")
+    np.save(vector_file_path, combined_vector)
+    
+    # Save detailed chunk metadata as JSON
+    metadata_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_chunks_metadata.json")
+    with open(metadata_file_path, "w") as f:
+        json.dump({
+            'video_id': video_id,
+            'total_keyframes': len(keyframes),
+            'chunks': [{
+                'index': c['index'],
+                'timestamp': c['timestamp'],
+                'ocr_text': c['ocr_text'][:500] if c['ocr_text'] else "",  # Truncate for JSON
+                'audio_context': c['audio_context'][:500] if c['audio_context'] else "",
+                'frame_path': c['frame_path'],
+                'change_score': c['change_score']
+            } for c in chunks]
+        }, f, indent=2)
+    
+    print("\n" + "="*60)
+    print(f"✅ PROCESSING COMPLETE")
+    print(f"   Keyframes detected: {len(keyframes)}")
+    print(f"   Chunks created: {len(chunks)}")
+    print(f"   Vector dimensions: {combined_vector.shape}")
+    print("="*60 + "\n")
+    
+    return {
+        'full_transcript': full_transcript,
+        'visual_text': "\n\n".join(all_ocr_texts),
+        'chunks': chunks,
+        'files': {
+            'audio': audio_file_path,
+            'visual': visual_file_path,
+            'vector': vector_file_path,
+            'chunks': chunks_file_path,
+            'metadata': metadata_file_path,
+            'frames_folder': video_frames_folder
+        },
+        'stats': {
+            'keyframes_detected': len(keyframes),
+            'chunks_created': len(chunks),
+            'vector_dim': 1024
+        }
+    }
+
+
+@app.route('/api/transcribe', methods=['POST'])
+def transcribe_video():
+    data = request.json
+    url = data.get('url')
+    
+    if not url:
+        return jsonify({'error': 'No URL provided'}), 400
+
+    def generate():
+        try:
+            # 1. Ingestion
+            yield f"data: {json.dumps({'status': 'Downloading video...'})}\n\n"
+            video_path, video_id = download_video(url)
+            
+            # 2. Keyframe-Aligned Processing
+            yield f"data: {json.dumps({'status': 'Detecting scene changes...'})}\n\n"
+            
+            # Process with keyframe alignment
+            results = process_keyframe_aligned(video_path, video_id)
+            
+            yield f"data: {json.dumps({'status': 'Processing keyframes...'})}\n\n"
+            yield f"data: {json.dumps({'status': 'Creating multimodal vectors...'})}\n\n"
+            yield f"data: {json.dumps({'status': 'Finalizing outputs...'})}\n\n"
+
+            result = {
+                'message': 'Processing complete',
+                'video_id': video_id,
+                'transcription': results['full_transcript'],
+                'visual_text': results['visual_text'],
+                'files': results['files'],
+                'stats': results['stats'],
+                'chunks_preview': [{
+                    'timestamp': c['timestamp'],
+                    'ocr_preview': c['ocr_text'][:100] if c['ocr_text'] else "",
+                    'audio_preview': c['audio_context'][:100] if c['audio_context'] else ""
+                } for c in results['chunks'][:5]]  # Preview first 5 chunks
+            }
+            yield f"data: {json.dumps({'status': 'Complete', 'data': result})}\n\n"
+
+        except Exception as e:
+            print(f"Error: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+
+@app.route('/api/search', methods=['POST'])
+def search_chunks():
+    """
+    NEW ENDPOINT: Search through video chunks using semantic similarity.
+    This leverages the keyframe-aligned vectors for precise retrieval.
+    """
+    data = request.json
+    query = data.get('query')
+    video_id = data.get('video_id')
+    top_k = data.get('top_k', 5)
+    
+    if not query or not video_id:
+        return jsonify({'error': 'Query and video_id required'}), 400
+    
+    try:
+        # Load chunk vectors
+        chunks_file = os.path.join(OUTPUT_FOLDER, f"{video_id}_chunks.npz")
+        if not os.path.exists(chunks_file):
+            return jsonify({'error': 'Video not processed yet'}), 404
+        
+        data = np.load(chunks_file)
+        chunk_vectors = data['vectors']
+        timestamps = data['timestamps']
+        
+        # Load metadata
+        metadata_file = os.path.join(OUTPUT_FOLDER, f"{video_id}_chunks_metadata.json")
+        with open(metadata_file, 'r') as f:
+            metadata = json.load(f)
+        
+        # Encode query
+        query_inputs = clip.tokenize([query], truncate=True).to(device)
+        with torch.no_grad():
+            query_features = clip_model.encode_text(query_inputs)
+            query_features /= query_features.norm(dim=-1, keepdim=True)
+        
+        query_vector = query_features.cpu().numpy()
+        
+        # Calculate similarity (using text portion of vectors for text queries)
+        text_vectors = chunk_vectors[:, :512]  # First 512 dims are text
+        similarities = np.dot(text_vectors, query_vector.T).flatten()
+        
+        # Get top-k results
+        top_indices = np.argsort(similarities)[::-1][:top_k]
+        
+        results = []
+        for idx in top_indices:
+            chunk_meta = metadata['chunks'][idx]
+            results.append({
+                'timestamp': float(timestamps[idx]),
+                'similarity': float(similarities[idx]),
+                'ocr_text': chunk_meta['ocr_text'],
+                'audio_context': chunk_meta['audio_context'],
+                'frame_path': chunk_meta['frame_path']
+            })
+        
+        return jsonify({'results': results})
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)

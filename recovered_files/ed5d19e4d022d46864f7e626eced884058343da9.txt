@@ -1,0 +1,303 @@
+import os
+import re
+import cv2
+import pytesseract
+import whisper
+import yt_dlp
+import Levenshtein
+import numpy as np
+import json
+import torch
+import clip
+from PIL import Image
+from concurrent.futures import ThreadPoolExecutor
+from flask import Flask, request, jsonify, Response, stream_with_context
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+# Configuration
+UPLOAD_FOLDER = 'downloads'
+OUTPUT_FOLDER = 'outputs'
+FRAMES_FOLDER = os.path.join(UPLOAD_FOLDER, 'frames')
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+os.makedirs(FRAMES_FOLDER, exist_ok=True)
+
+# Initialize Whisper Model (Load once)
+# Using 'base' for speed in development, change to 'medium' or 'large' for production accuracy
+print("Loading Whisper model...")
+model = whisper.load_model("base")
+print("Whisper model loaded.")
+
+# Initialize CLIP Model
+print("Loading CLIP model...")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+clip_model, clip_preprocess = clip.load("ViT-B/32", device=device)
+print("CLIP model loaded.")
+
+def download_video(url):
+    """Downloads video using yt-dlp and returns the filename."""
+    ydl_opts = {
+        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        'outtmpl': os.path.join(UPLOAD_FOLDER, '%(id)s.%(ext)s'),
+        'noplaylist': True,
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info_dict = ydl.extract_info(url, download=True)
+        video_id = info_dict.get("id", None)
+        ext = info_dict.get("ext", "mp4")
+        filename = f"{video_id}.{ext}"
+        return os.path.join(UPLOAD_FOLDER, filename), video_id
+
+def process_audio(video_path):
+    """Extracts and transcribes audio using Whisper."""
+    print(f"Transcribing audio from {video_path}...")
+    result = model.transcribe(video_path)
+    return result["text"]
+
+def clean_text(text):
+    """Basic syntax filtering to remove noise."""
+    # Remove non-ascii characters
+    text = re.sub(r'[^\x00-\x7F]+', ' ', text)
+    
+    # Remove specific video player noise/overlays
+    text = re.sub(r'(Show UI|Show Ul|Subscribe|Share|Download)', '', text, flags=re.IGNORECASE)
+    
+    # Filter out garbage lines (lines with too many symbols/too few real letters)
+    lines = text.split('\n')
+    cleaned_lines = []
+    for line in lines:
+        line = line.strip()
+        if len(line) < 3: continue # Skip very short lines
+        
+        # Calculate ratio of alphanumeric chars
+        alnum_count = sum(c.isalnum() or c.isspace() for c in line)
+        if (alnum_count / len(line)) > 0.6: # Keep if > 60% is text/spaces
+             cleaned_lines.append(line)
+    
+    text = " ".join(cleaned_lines)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+def process_visuals(video_path):
+    """
+    Extracts frames, performs OCR, and consolidates text using Levenshtein distance.
+    Phase 1: Extraction (OpenCV + Tesseract)
+    Phase 2: Consolidation (Fuzzy Matching + De-duplication)
+    """
+    print(f"Processing visuals from {video_path}...")
+    cap = cv2.VideoCapture(video_path)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    
+    # Sample rate: Extract 1 frame every 2 seconds to save time/resources
+    sample_rate = 2 # seconds
+    frame_interval = int(fps * sample_rate)
+    
+    consolidated_text = []
+    saved_frame_paths = []
+    last_text = ""
+    prev_gray_small = None
+    
+    frame_count = 0
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
+            
+        if frame_count % frame_interval == 0:
+            # Preprocessing for OCR
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            
+            # Optimization: Visual Change Detection
+            # Resize to small resolution for fast comparison
+            gray_small = cv2.resize(gray, (100, 100))
+            
+            should_process = True
+            if prev_gray_small is not None:
+                # Calculate Mean Squared Error
+                err = np.sum((gray_small.astype("float") - prev_gray_small.astype("float")) ** 2)
+                err /= float(gray_small.shape[0] * gray_small.shape[1])
+                
+                # If error is small (frames are similar), skip OCR
+                # Threshold 50 is arbitrary but works well for detecting slide changes/scrolls
+                if err < 50:
+                    should_process = False
+            
+            prev_gray_small = gray_small
+
+            if should_process:
+                # Improved Preprocessing for OCR (Handwriting Optimized)
+                
+                # 1. Denoise (removes graininess/compression artifacts)
+                # h=30 is strong denoising
+                gray = cv2.fastNlMeansDenoising(gray, None, 30, 7, 21)
+
+                # 2. Invert if background is dark
+                if np.mean(gray) < 127:
+                    gray = cv2.bitwise_not(gray)
+                
+                # 3. Rescale (Upscaling) - Cubic interpolation is better for text
+                gray = cv2.resize(gray, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+
+                # 4. Adaptive Thresholding (Better for handwriting/varying illumination)
+                # Using Gaussian C to handle local lighting variations
+                thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, \
+                                             cv2.THRESH_BINARY, 21, 10)
+                
+                # 5. Morphological Dilation (Thicken thin handwritten strokes)
+                # This helps connect broken lines in handwriting
+                kernel = np.ones((2,2), np.uint8)
+                thresh = cv2.dilate(thresh, kernel, iterations=1)
+
+                # Phase 1: Extraction
+                custom_config = r'--oem 3 --psm 6'
+                raw_text = pytesseract.image_to_string(thresh, config=custom_config)
+                cleaned_line = clean_text(raw_text)
+                
+                if cleaned_line:
+                    # Phase 2: Consolidation logic
+                    # Calculate similarity with the previously extracted text block
+                    similarity = Levenshtein.ratio(last_text, cleaned_line)
+                    
+                    # Safeguard 3: Heuristic-Based Preservation
+                    # Check if line starts with a keyword (def, class, const, etc.)
+                    keywords = ["def ", "class ", "const ", "let ", "var ", "function ", "import ", "from ", "public ", "private ", "protected "]
+                    is_keyword_start = any(cleaned_line.startswith(k) for k in keywords)
+                    
+                    # Safeguard 1: High Similarity Anchor
+                    # Base threshold 0.90. If keyword, be stricter (e.g., 0.95) to avoid merging distinct similar lines.
+                    threshold = 0.95 if is_keyword_start else 0.90
+                    
+                    if similarity < threshold: 
+                        consolidated_text.append(cleaned_line)
+                        last_text = cleaned_line
+                        
+                        # Save frame
+                        frame_filename = f"frame_{frame_count}.jpg"
+                        frame_path = os.path.join(FRAMES_FOLDER, frame_filename)
+                        cv2.imwrite(frame_path, frame)
+                        saved_frame_paths.append(frame_path)
+                        
+                    else:
+                        # Safeguard 2: Length Validation
+                        # If similar, prefer the longer version (revealing code during scroll)
+                        if len(cleaned_line) > len(last_text):
+                            consolidated_text[-1] = cleaned_line
+                            last_text = cleaned_line
+                            
+                            # Update the last saved frame
+                            if saved_frame_paths:
+                                frame_filename = f"frame_{frame_count}.jpg"
+                                frame_path = os.path.join(FRAMES_FOLDER, frame_filename)
+                                cv2.imwrite(frame_path, frame)
+                                saved_frame_paths[-1] = frame_path
+        
+        frame_count += 1
+        
+    cap.release()
+    return "\n".join(consolidated_text), saved_frame_paths
+
+@app.route('/api/transcribe', methods=['POST'])
+def transcribe_video():
+    data = request.json
+    url = data.get('url')
+    
+    if not url:
+        return jsonify({'error': 'No URL provided'}), 400
+
+    def generate():
+        try:
+            # 1. Ingestion
+            yield f"data: {json.dumps({'status': 'Downloading video...'})}\n\n"
+            video_path, video_id = download_video(url)
+            
+            # Parallel Execution for Audio and Visual Processing
+            yield f"data: {json.dumps({'status': 'Processing Audio and Visuals (Parallel)...'})}\n\n"
+            
+            with ThreadPoolExecutor(max_workers=2) as executor:
+                # Submit tasks
+                future_audio = executor.submit(process_audio, video_path)
+                future_visual = executor.submit(process_visuals, video_path)
+                
+                # Wait for results
+                audio_transcript = future_audio.result()
+                visual_text, frame_paths = future_visual.result()
+            
+            # 3. Text Fusion Layer
+            yield f"data: {json.dumps({'status': 'Fusing Text Sources...'})}\n\n"
+            combined_text = f"Audio Transcript:\n{audio_transcript}\n\nVisual Text:\n{visual_text}"
+            
+            # 4. CLIP Text Encoding
+            yield f"data: {json.dumps({'status': 'Generating Semantic Text Vector...'})}\n\n"
+            # Truncate text to fit CLIP context length (77 tokens) - simplistic approach for now
+            # In a real app, we'd chunk the text. Here we take the first 77 tokens approx.
+            text_inputs = clip.tokenize([combined_text[:300]], truncate=True).to(device)
+            with torch.no_grad():
+                text_features = clip_model.encode_text(text_inputs)
+                text_features /= text_features.norm(dim=-1, keepdim=True)
+            
+            # 5. CLIP Visual Encoding
+            yield f"data: {json.dumps({'status': 'Generating Visual Vector Embedding...'})}\n\n"
+            visual_features_list = []
+            # Process a subset of frames to save time if many were captured
+            frames_to_process = frame_paths[:10] if len(frame_paths) > 10 else frame_paths
+            
+            for frame_path in frames_to_process:
+                image = clip_preprocess(Image.open(frame_path)).unsqueeze(0).to(device)
+                with torch.no_grad():
+                    image_features = clip_model.encode_image(image)
+                    image_features /= image_features.norm(dim=-1, keepdim=True)
+                    visual_features_list.append(image_features)
+            
+            if visual_features_list:
+                # Average visual features to get a single visual context vector
+                visual_features = torch.mean(torch.stack(visual_features_list), dim=0)
+                visual_features /= visual_features.norm(dim=-1, keepdim=True)
+            else:
+                # Fallback if no frames
+                visual_features = torch.zeros_like(text_features)
+
+            # 6. Vector Concatenation
+            yield f"data: {json.dumps({'status': 'Creating Multimodal Vector...'})}\n\n"
+            multimodal_vector = torch.cat((text_features, visual_features), dim=1).cpu().numpy()
+            
+            yield f"data: {json.dumps({'status': 'Finalizing outputs...'})}\n\n"
+            
+            # Save outputs to files
+            audio_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_audio.txt")
+            visual_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_visual.txt")
+            vector_file_path = os.path.join(OUTPUT_FOLDER, f"{video_id}_multimodal_vector.npy")
+            
+            with open(audio_file_path, "w") as f:
+                f.write(audio_transcript)
+                
+            with open(visual_file_path, "w") as f:
+                f.write(visual_text)
+            
+            # Save the multimodal vector as NumPy file
+            np.save(vector_file_path, multimodal_vector)
+
+            result = {
+                'message': 'Processing complete',
+                'video_id': video_id,
+                'transcription': audio_transcript,
+                'visual_text': visual_text,
+                'files': {
+                    'audio': audio_file_path,
+                    'visual': visual_file_path,
+                    'vector': vector_file_path
+                },
+                'vector_dim': multimodal_vector.shape[1]
+            }
+            yield f"data: {json.dumps({'status': 'Complete', 'data': result})}\n\n"
+
+        except Exception as e:
+            print(f"Error: {str(e)}")
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)

@@ -1,0 +1,75 @@
+161n1)
+
+Theo D Tarsal on
+
+Google Cloud Platform fireship-lessons Search products and resources DASHBOARD ACTIVITY RECOMMENDATIONS Projectr App Engine oject na eship-let count/sec)
+
+Google Cloud Platform fireship-lessons Search products and resources DMMENDATIONS Home Recent Home fireship-lessons Container Registry Dashboard App Engine fireship-lessons ec) Dashboard App Engine fireship-demos Compute Engine Dashboard App Engine fireship demos Network services Home fireship-demos VPC network Services App Engine fireship-demos Services App Engine fireship-lessons PRODUCTS Versions App Engine fireship-lessons Instances App Engine fireship-lessons Marketplace 12.15 12.30 Versions App Engine fireship-demos Instances App Engine fireship-demos API APIs and services Anthos he dashboard Cloud Run fireship-lessons Support Cloud Run fireship-lessons IAM & Admin Cloud Run fireship-lessons Getting started 1.0 View activity controls Billing
+
+Google Cloud Platform fireship-lessons Search products and resources Create an instance Region Region is permanent Zone Zone is permanent New VM instance from template Create a single VM instance from an existing template us-central1 (lowa) us-centrall-a Machine configuration New VM instance from machine image Create a single VM instance from an existing machine image Machine family General-purpose Compute-optimised Memory-optimised GPU Large-memory maChine types for memory-intensive workloads Series M1 Powered by Intel Skylake CPU platform or one of its predecessors Marketplace Deploy a ready-to-go solution onto a VM instance Machine type mI-megamem-96 (96 VCPU; 1.4 TB memory) VCPU Memory 1,.4TB GPUs CPU platform and GPU Confidential VM service Enable the Confidential Computing service on this VM instance. Container Deploy a container image to this VM instance: Learn more Boot disk
+
+JUST
+
+N ~ FY a, Ly) Ee
+
+CLICKS CHja0f_
+
+CODE aws
+
+main.tf main.tf] . Do0 resource Io google_compute_instance W "mom" { machine_type "e2-medium M zone "us-centrall-a" W resource "aws instance 0n "dad" { instance_type "t3.large" availability_zone = "us-west-2a" HCL HASHICOF configurATIO LANGUACE
+
+als
+
+awS
+
+READMEmd Terraform Website: https:/ /wwW.terraform.io Forums: HashiCorp Discuss Documentation: https:/ /wwW.terraform io/docs/ Tutorials: HashiCorp's Learn Platform Certification Exam: HashiCorp Certified: Terraform Associate HashiCorp Terraform Terraform is a tool for building, changing; and versioning infrastructure safely and efficiently: Terraform can manage existing and popular service providers as well as custom in-house solutions. The key ` features of Terraform are: Infrastructure as Code: Infrastructure is described using a high-level configuration syntax This allows a blueprint of your datacenter to be versioned and treated as you would any other code: Additionally, infrastructure can be d and re-used.
+
+CLI terraform init
+
+E. D E 0 &
+
+main.tf main.tfl %zterraform terraform { GLOBAL SETTINGS
+
+main.tf main.tfl Ezterraform terraform { required_providers {
+
+main.tf main.tf] . terraform { required_providers { google 3 source "hashicorp/google version = "3.5.0"
+
+main.tf main.tfl <z provider "google' provider "google" { credentials file <NAME>.json" ) CONNECT
+
+main.tf main.tf] provider "google" { credentials file <NAME>.json") project region zone <PROJECT ID> "us-centrall "us-centrall-c"
+
+Hthiddi Terraform Registry main.tf main.tf] Egresource "google_compute_insta Providers hashicorp google Version 3. google resource "google_compute_instancef GOOGLE DOCUMENTATION Filter Liuuu Juuice nepusilunes Cloud Spanner Cloud Storage Cloud TPU Cloud Tasks RESOURCE TYPE Compute Engine Resources google_compute_address google_compute_attached_disk google_compute_autoscaler google_compute_backend_bucket google_compute_backend_bucket signed_url key google_compute_backend_service google_compute_backend_service sianed url key
+
+main.tf main.tf ?zresource "google_compute_instance' M "default" resource 'google_compute instance "default" { I
+
+main.tf main.tf <gresource "google_compute_instance' "default"| &zboot_di: resource "google_compute_ instance "default" { name "Hi Mom! machine_type "e2-medium zone "us-centrall-a" boot disk { initialize_params image "debian-cloud/debian-9"
+
+main.tf main.tf] <zresource "google_compute_instance' "default" resource google_compute_ instance detault { name "Hi Mom ! machine_type "e2-medium" zone "us-centrall-a" boot disk { initialize_params { image "debian-cloud/debian-9" network_interface { network = "default" access_config {
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra APPLY MAKE CHANGES To CLOUD
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terraform apply
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL terraform Terraform used the selected providers to generate the following execution plan. R actions are indicated with the following symbols: + create Terraform Will perform the following actions: # google_compute_instance.default will be created + resource Wu 'google_compute_instance Wu "default" { + can_ip_forward false + cpu_platform (known after apply) + deletion_protection false + guest_accelerator (known after apply) + id (known after apply) + instance_id (known after apply) + label_fingerprint (known after apply) + machine_type "f1-micro" II + metadata_fingerprint (known after apply) + min_ cpu_platform (known after apply) + name "hi-mom Mu
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL terraform + source (known after apply) + initialize_params + image "debian-cloud/debian-9" + labels (known after apply) + size (known after apply) + type (known after apply) network_interface { + name + network + network_ip + subnetwork + subnetwork_project (known after apply) "default" (known after apply) (known after apply) (known after apply) + access config { + nat_ip + network_tier (known after apply) (known after apply)
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terrl SHOW GET CUrRENT STATE
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash network_interface { name "nic0" network "https: / /WWW-googleapis.com/compute/vl/projectslfire lobal/networks/default" network_ip "10.128.0.6" subnetwork "https: / /WWW.googleapis.com/compute/v1/projects/fire egions/us-centrall/subnetworks/default" subnetwork_project "fireship-lessons MI access config { nat_ip network_tier Vi 35.184.156.31" "PREMIUM" scheduling { automatic_restart true
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL VM instances Compute Engine < 7 C console cloud google com/computefinstances?project-fireship + key + operator + values (known after apply) (known after apply) (known after apply) 17590 Google Cloud Platform Compute Engine VM instances hi-mom uS- Plan: 1 to add, 0 to change, 0 to destroy_ centi Do you want to perform these actions? Terraform will perform the actions described al Only yes will be accepted to approve_ Related Actions View Billing Report View and manage your Compute Engine billing Il; Monitor VMs View outlier VMs across metrics like CPU and Network Enter a value: yes google_compute_instance.default: Creating_ google_compute_instance.default: Still creating google_compute_instance.default: Creation comple slus-centrall-alinstances/hi-mom]
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terraform applyp]
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL terraform Terraform used the selected providers to generate the following execution plan. R actions are indicated with the following symbols: 1+ destroy and then create replacement Terraform Will perform the following actions: google_compute_instance.default must be replaced + resource WV 'google_compute_instance Wu "default" cpu_platform "Intel Haswell Mi (known after apply) enable_display false null guest_accelerator [] (known after apply) id 'projects/fireship-lessons/zones/us-centrall-alins (known after apply) instance_id "7843896911884829855" "> (known after apply) label_fingerprint M '42WmSpB8rSM=" MI I (known after apply) labels {} > null metadata {} > null metadata_fingerprint "WSBydSDJ-EY=" "> (known after apply) + min_ cpu_platform (known after apply)
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terraf]
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terraform destroy DESTROY OPPOSITE OF APPLY
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL bash terra terraform destroy
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL terraform image "https:/ WWW googleapis.com/compute/v1/projects/debian-c ages/debian-9-stretch-v20210721" null labels {} 2> null size 10 > null type Io 'pd-standard" F> null network_interface { name "nice" F> null network "https: / /WWW-googleapis.com/compute/vl/projects/ ns/global/networks/default" null network_ip "10.128.0.6" "> null subnetwork "https: / [WWW.googleapis.com/compute/v1/projects/ ns/regions/us-centrall/subnetworks/default' II null subnetwork_project "fireship-lessons MI 3> null access config { nat_ip network_tier "35.184.156.31" ~> null I 'PREMIUM" "> null
+
+Thto Tarra)doju

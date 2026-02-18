@@ -1,0 +1,59 @@
+
+\begin{table}[h]
+\centering
+\caption{Full Video Evaluation Results - 6bZ61L1P_5k}
+\label{tab:full_video_eval}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Score} \\
+\hline
+Total Frames Analyzed & 89 \\
+Frames with OCR Text & 88 \\
+Frames with Code Detected & 65 \\
+Unique Files Detected & 2 \\
+Unique Components Detected & 4 \\
+\hline
+OCR Coverage Score & 98.88\% \\
+Code Detection Score & 73.03\% \\
+Retrieval Success Rate & 100.00\% \\
+Extraction Success Rate & 0.00\% \\
+Consistency Score & 25.40\% \\
+\hline
+\textbf{Overall System Score} & \textbf{63.19\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Retrieval Evaluation Results}
+\label{tab:retrieval_eval}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Query} & \textbf{Results} & \textbf{Top Score} \\
+\hline
+import statements & 5 & 0.8487 \\
+React components & 5 & 0.8305 \\
+useState hook & 5 & 0.8104 \\
+export default & 5 & 0.8420 \\
+function definition & 5 & 0.8388 \\
+CSS styles & 5 & 0.8262 \\
+Timeline component & 5 & 0.8267 \\
+section title & 5 & 0.8265 \\
+carousel & 5 & 0.7709 \\
+button click handler & 5 & 0.7895 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Code Extraction Results}
+\label{tab:extraction_eval}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Component} & \textbf{Lines} & \textbf{Chars} & \textbf{Frames} \\
+\hline
+\hline
+\end{tabular}
+\end{table}

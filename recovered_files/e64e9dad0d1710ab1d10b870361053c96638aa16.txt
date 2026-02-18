@@ -1,0 +1,148 @@
+{
+  "video_id": "rLiJv7N1Wyo",
+  "total_frames": 127,
+  "ocr_metrics": {
+    "total_frames": 127,
+    "frames_with_ocr": 126,
+    "frames_with_code": 83,
+    "frames_with_imports": 0,
+    "frames_with_functions": 0,
+    "frames_with_jsx": 13,
+    "avg_ocr_length": 403.8095238095238,
+    "code_density": 0.6535433070866141,
+    "detected_files": [
+      "stvle.css",
+      "style.css"
+    ],
+    "detected_components": [
+      "Idiv",
+      "Ia1v",
+      "Isection"
+    ],
+    "detected_imports": [],
+    "detected_functions": []
+  },
+  "audio_metrics": {
+    "total_frames": 127,
+    "frames_with_audio": 7,
+    "avg_audio_length": 162.0,
+    "frames_with_code_mentions": 3,
+    "detected_topics": [
+      "video",
+      "section",
+      "this",
+      "videos",
+      "will",
+      "website",
+      "channel",
+      "create",
+      "amazing",
+      "complete",
+      "link",
+      "description",
+      "till",
+      "previous",
+      "designed",
+      "header",
+      "home",
+      "about",
+      "services",
+      "find"
+    ],
+    "technical_terms_count": 1
+  },
+  "detection_metrics": {
+    "total_unique_files": 0,
+    "total_unique_components": 3,
+    "total_unique_functions": 0,
+    "total_unique_imports": 0,
+    "code_structure_detected": {
+      "files": [],
+      "components": [
+        "Idiv",
+        "Isection",
+        "Ia1v"
+      ]
+    },
+    "file_appearances": {}
+  },
+  "retrieval_metrics": {
+    "queries_tested": 10,
+    "successful_queries": 10,
+    "avg_results_per_query": 5.0,
+    "avg_response_time": 0,
+    "query_results": {
+      "import statements": {
+        "num_results": 5,
+        "top_score": 0.8471428751945496
+      },
+      "React components": {
+        "num_results": 5,
+        "top_score": 0.8264427781105042
+      },
+      "useState hook": {
+        "num_results": 5,
+        "top_score": 0.8111509680747986
+      },
+      "export default": {
+        "num_results": 5,
+        "top_score": 0.8433936834335327
+      },
+      "function definition": {
+        "num_results": 5,
+        "top_score": 0.842465877532959
+      },
+      "CSS styles": {
+        "num_results": 5,
+        "top_score": 0.8428993821144104
+      },
+      "Timeline component": {
+        "num_results": 5,
+        "top_score": 0.8242456912994385
+      },
+      "section title": {
+        "num_results": 5,
+        "top_score": 0.8252983093261719
+      },
+      "carousel": {
+        "num_results": 5,
+        "top_score": 0.7735770344734192
+      },
+      "button click handler": {
+        "num_results": 5,
+        "top_score": 0.7904646992683411
+      }
+    }
+  },
+  "extraction_metrics": {
+    "files_attempted": 0,
+    "files_with_code": 0,
+    "avg_code_length": 0,
+    "avg_frames_per_file": 0,
+    "extraction_results": {},
+    "ocr_quality_analysis": {}
+  },
+  "consistency_metrics": {
+    "import_file_consistency": 0,
+    "component_jsx_consistency": 0,
+    "temporal_consistency": 0.76,
+    "details": {
+      "unique_files": [],
+      "unique_imports": [],
+      "unique_components": [],
+      "unique_jsx_tags": [
+        "Idiv",
+        "Ia1v",
+        "Isection"
+      ]
+    }
+  },
+  "summary": {
+    "ocr_coverage_score": 99.21,
+    "code_detection_score": 65.35,
+    "retrieval_success_score": 100.0,
+    "extraction_success_score": 0,
+    "consistency_score": 25.84,
+    "overall_system_score": 61.79
+  }
+}

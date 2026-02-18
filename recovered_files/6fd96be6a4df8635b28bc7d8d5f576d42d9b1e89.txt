@@ -1,0 +1,813 @@
+"""
+Full Video Evaluation Framework
+Evaluates the entire video processing pipeline without specific ground truth files.
+Measures OCR quality, code detection, retrieval accuracy, and system metrics.
+"""
+
+import json
+import os
+import re
+import numpy as np
+from collections import Counter
+from typing import Dict, List, Tuple
+import requests
+
+# ==============================================================================
+# FULL VIDEO EVALUATOR
+# ==============================================================================
+
+class FullVideoEvaluator:
+    def plot_evaluation_results(self, save_path=None, show_plot=True):
+        """
+        Generate a bar chart of main evaluation metrics and save/show it.
+        """
+        import matplotlib.pyplot as plt
+        if not self.results or 'summary' not in self.results:
+            print("No evaluation results to plot.")
+            return
+        summary = self.results['summary']
+        metrics = [
+            ("OCR Coverage", summary.get('ocr_coverage_score', 0)),
+            ("Code Detection", summary.get('code_detection_score', 0)),
+            ("Retrieval Success", summary.get('retrieval_success_score', 0)),
+            ("Extraction Success", summary.get('extraction_success_score', 0)),
+            ("Consistency", summary.get('consistency_score', 0)),
+            ("Overall Score", summary.get('overall_system_score', 0)),
+        ]
+        labels, values = zip(*metrics)
+        plt.figure(figsize=(8, 5))
+        bars = plt.bar(labels, values, color=['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f', '#edc949'])
+        plt.ylim(0, 100)
+        plt.ylabel('Score (%)')
+        plt.title(f'Evaluation Results for Video: {self.video_id}')
+        plt.grid(axis='y', linestyle='--', alpha=0.6)
+        for bar, value in zip(bars, values):
+            plt.text(bar.get_x() + bar.get_width()/2, value + 1, f'{value:.1f}%', ha='center', va='bottom', fontsize=10)
+        plt.tight_layout()
+        if save_path:
+            plt.savefig(save_path)
+            print(f"Diagram saved to {save_path}")
+        if show_plot:
+            plt.show()
+        plt.close()
+    """
+    Evaluates the entire video processing pipeline for a given video.
+    Does not require specific file ground truth - measures system capabilities.
+    """
+    
+    def __init__(self, video_id: str, output_folder: str = 'outputs', backend_url: str = 'http://localhost:5001'):
+        self.video_id = video_id
+        self.output_folder = output_folder
+        self.backend_url = backend_url
+        self.metadata = None
+        self.chunks = []
+        self.results = {}
+        
+    def load_video_data(self) -> bool:
+        """Load video metadata and chunks."""
+        metadata_path = os.path.join(self.output_folder, f"{self.video_id}_chunks_metadata.json")
+        
+        if not os.path.exists(metadata_path):
+            print(f"Error: Metadata file not found at {metadata_path}")
+            return False
+        
+        with open(metadata_path, 'r') as f:
+            self.metadata = json.load(f)
+        
+        self.chunks = self.metadata.get('chunks', [])
+        print(f"Loaded {len(self.chunks)} chunks for video {self.video_id}")
+        return True
+    
+    # --------------------------------------------------------------------------
+    # OCR Quality Metrics
+    # --------------------------------------------------------------------------
+    
+    def evaluate_ocr_quality(self) -> Dict:
+        """
+        Evaluate OCR extraction quality across all frames.
+        """
+        ocr_metrics = {
+            'total_frames': len(self.chunks),
+            'frames_with_ocr': 0,
+            'frames_with_code': 0,
+            'frames_with_imports': 0,
+            'frames_with_functions': 0,
+            'frames_with_jsx': 0,
+            'avg_ocr_length': 0,
+            'code_density': 0,
+            'detected_files': set(),
+            'detected_components': set(),
+            'detected_imports': set(),
+            'detected_functions': set(),
+        }
+        
+        total_ocr_length = 0
+        # Expanded code keywords and patterns
+        code_keywords = [
+            'import', 'export', 'const', 'function', 'return', 'useState', 'useEffect', 'class',
+            'let', 'var', 'if', 'else', 'elif', 'endif', 'for', 'while', 'switch', 'case', 'break', 'continue',
+            'try', 'except', 'catch', 'finally', 'def', 'lambda', 'public', 'private', 'protected', 'static',
+            'void', 'int', 'float', 'double', 'char', 'string', 'boolean', 'bool', 'new', 'this', 'self',
+            '=>', '->', 'return', 'main', 'print', 'console.log', 'System.out', 'echo', 'extends', 'implements',
+            'interface', 'enum', 'struct', 'package', 'namespace', 'module', 'from', 'as', 'with', 'async', 'await'
+        ]
+        # Regex patterns for code blocks (e.g., curly braces, semicolons, indentation)
+        code_block_patterns = [
+            r'\{[^\}]+\}',  # Curly braces block
+            r';\s*$',         # Line ends with semicolon
+            r'^\s{4,}\w+',   # Indented line (Python style)
+            r'\bfunction\b', # function keyword
+            r'\bclass\b',    # class keyword
+            r'\blet\b|\bvar\b', # JS variable declarations
+            r'\bdef\b',      # Python function
+            r'\bpublic\b|\bprivate\b|\bprotected\b', # Java/C#
+            r'\bif\b|\belse\b|\bfor\b|\bwhile\b', # control flow
+        ]
+        
+        for chunk in self.chunks:
+            ocr = chunk.get('ocr_text', '')
+            
+            if ocr and len(ocr) > 10:
+                ocr_metrics['frames_with_ocr'] += 1
+                total_ocr_length += len(ocr)
+                
+                ocr_lower = ocr.lower()
+                
+                # Check for code presence (keywords or code block patterns)
+                is_code = any(kw in ocr_lower for kw in code_keywords)
+                # Check for code block patterns (regex)
+                for pat in code_block_patterns:
+                    if re.search(pat, ocr, re.MULTILINE):
+                        is_code = True
+                        break
+                if is_code:
+                    ocr_metrics['frames_with_code'] += 1
+                
+                # Check for imports
+                if 'import' in ocr_lower:
+                    ocr_metrics['frames_with_imports'] += 1
+                    # Extract import names
+                    imports = re.findall(r"import\s+(?:{[^}]+}|[\w]+)\s+from\s+['\"]([^'\"]+)['\"]", ocr)
+                    ocr_metrics['detected_imports'].update(imports)
+                
+                # Check for functions
+                func_matches = re.findall(r'(?:function|const)\s+(\w+)\s*(?:=\s*)?[\(\{]', ocr)
+                if func_matches:
+                    ocr_metrics['frames_with_functions'] += 1
+                    ocr_metrics['detected_functions'].update(func_matches)
+                
+                # Check for JSX components
+                jsx_matches = re.findall(r'<([A-Z][a-zA-Z0-9]*)', ocr)
+                if jsx_matches:
+                    ocr_metrics['frames_with_jsx'] += 1
+                    ocr_metrics['detected_components'].update(jsx_matches)
+                
+                # Detect file names (from tabs, file explorer)
+                file_matches = re.findall(r'(\w+\.(?:js|jsx|ts|tsx|css|json))', ocr)
+                ocr_metrics['detected_files'].update(file_matches)
+        
+        # Calculate averages
+        if ocr_metrics['frames_with_ocr'] > 0:
+            ocr_metrics['avg_ocr_length'] = total_ocr_length / ocr_metrics['frames_with_ocr']
+        
+        ocr_metrics['code_density'] = ocr_metrics['frames_with_code'] / ocr_metrics['total_frames'] if ocr_metrics['total_frames'] > 0 else 0
+        
+        # Convert sets to lists for JSON serialization
+        ocr_metrics['detected_files'] = list(ocr_metrics['detected_files'])
+        ocr_metrics['detected_components'] = list(ocr_metrics['detected_components'])
+        ocr_metrics['detected_imports'] = list(ocr_metrics['detected_imports'])
+        ocr_metrics['detected_functions'] = list(ocr_metrics['detected_functions'])
+        
+        return ocr_metrics
+    
+    # --------------------------------------------------------------------------
+    # Audio Quality Metrics
+    # --------------------------------------------------------------------------
+    
+    def evaluate_audio_quality(self) -> Dict:
+        """
+        Evaluate audio transcription quality across all frames.
+        """
+        audio_metrics = {
+            'total_frames': len(self.chunks),
+            'frames_with_audio': 0,
+            'avg_audio_length': 0,
+            'frames_with_code_mentions': 0,
+            'detected_topics': [],
+            'technical_terms_count': 0,
+        }
+        
+        total_audio_length = 0
+        code_terms = ['function', 'component', 'import', 'export', 'react', 'javascript', 
+                     'variable', 'const', 'state', 'props', 'hook', 'effect', 'useState',
+                     'useEffect', 'return', 'jsx', 'html', 'css', 'style', 'div', 'section']
+        
+        topic_counter = Counter()
+        tech_terms_found = set()
+        
+        for chunk in self.chunks:
+            audio = chunk.get('audio_context', '')
+            
+            if audio and len(audio) > 10:
+                audio_metrics['frames_with_audio'] += 1
+                total_audio_length += len(audio)
+                
+                audio_lower = audio.lower()
+                
+                # Check for code mentions
+                for term in code_terms:
+                    if term in audio_lower:
+                        audio_metrics['frames_with_code_mentions'] += 1
+                        tech_terms_found.add(term)
+                        break
+                
+                # Extract potential topics
+                words = re.findall(r'\b[a-zA-Z]{4,}\b', audio)
+        # ...existing code...
+                topic_counter.update(words)
+        
+        # Calculate averages
+        if audio_metrics['frames_with_audio'] > 0:
+            audio_metrics['avg_audio_length'] = total_audio_length / audio_metrics['frames_with_audio']
+        
+        audio_metrics['detected_topics'] = [word for word, count in topic_counter.most_common(20)]
+        audio_metrics['technical_terms_count'] = len(tech_terms_found)
+        
+        return audio_metrics
+    
+    # --------------------------------------------------------------------------
+    # Code Detection Accuracy
+    # --------------------------------------------------------------------------
+    
+    def evaluate_code_detection(self) -> Dict:
+        """
+        Evaluate how well the system detects and categorizes code.
+        """
+        detection_metrics = {
+            'total_unique_files': 0,
+            'total_unique_components': 0,
+            'total_unique_functions': 0,
+            'total_unique_imports': 0,
+            'code_structure_detected': {},
+            'file_appearances': {},
+        }
+        
+        file_frames = {}
+        component_frames = {}
+        
+        for i, chunk in enumerate(self.chunks):
+            ocr = chunk.get('ocr_text', '')
+            if not ocr:
+                continue
+            
+            # Track file appearances
+            files = re.findall(r'(\w+\.(?:js|jsx|ts|tsx))', ocr)
+            for f in files:
+                if f not in file_frames:
+                    file_frames[f] = []
+                file_frames[f].append(i)
+            
+            # Track component appearances
+            components = re.findall(r'<([A-Z][a-zA-Z0-9]*)', ocr)
+            for c in components:
+                if c not in component_frames:
+                    component_frames[c] = []
+                component_frames[c].append(i)
+        
+        detection_metrics['total_unique_files'] = len(file_frames)
+        detection_metrics['total_unique_components'] = len(component_frames)
+        
+        # File appearance stats
+        detection_metrics['file_appearances'] = {
+            f: len(frames) for f, frames in sorted(file_frames.items(), key=lambda x: -len(x[1]))[:20]
+        }
+        
+        # Component appearance stats  
+        detection_metrics['code_structure_detected'] = {
+            'files': list(file_frames.keys())[:30],
+            'components': list(component_frames.keys())[:30],
+        }
+        
+        return detection_metrics
+    
+    # --------------------------------------------------------------------------
+    # Retrieval Quality Evaluation
+    # --------------------------------------------------------------------------
+    
+    def evaluate_retrieval_quality(self) -> Dict:
+        """
+        Test retrieval quality with various queries.
+        """
+        test_queries = [
+            "import statements",
+            "React components",
+            "useState hook",
+            "export default",
+            "function definition",
+            "CSS styles",
+            "Timeline component",
+            "section title",
+            "carousel",
+            "button click handler"
+        ]
+        
+        retrieval_metrics = {
+            'queries_tested': len(test_queries),
+            'successful_queries': 0,
+            'avg_results_per_query': 0,
+            'avg_response_time': 0,
+            'query_results': {}
+        }
+        
+        total_results = 0
+        
+        for query in test_queries:
+            try:
+                response = requests.post(
+                    f"{self.backend_url}/api/search",
+                    json={"query": query, "video_id": self.video_id, "top_k": 5},
+                    timeout=30
+                )
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    results = data.get('results', [])
+                    retrieval_metrics['successful_queries'] += 1
+                    total_results += len(results)
+                    
+                    retrieval_metrics['query_results'][query] = {
+                        'num_results': len(results),
+                        'top_score': results[0].get('similarity', 0) if results else 0
+                    }
+            except Exception as e:
+                retrieval_metrics['query_results'][query] = {'error': str(e)}
+        
+        if retrieval_metrics['successful_queries'] > 0:
+            retrieval_metrics['avg_results_per_query'] = total_results / retrieval_metrics['successful_queries']
+        
+        return retrieval_metrics
+    
+    # --------------------------------------------------------------------------
+    # Code Extraction Quality
+    # --------------------------------------------------------------------------
+    
+    def evaluate_code_extraction(self) -> Dict:
+        """
+        Test code extraction quality by analyzing raw OCR content.
+        When LLM is rate-limited, this evaluates extraction potential from OCR.
+        """
+        extraction_metrics = {
+            'files_attempted': 0,
+            'files_with_code': 0,
+            'avg_code_length': 0,
+            'avg_frames_per_file': 0,
+            'extraction_results': {},
+            'ocr_quality_analysis': {}
+        }
+        
+        # Detect actual component files from OCR (not library references like React.js)
+        import re
+        from collections import Counter
+        
+        components = []
+        for chunk in self.chunks:
+            ocr = chunk.get('ocr_text', '')
+            if not ocr:
+                continue
+            # Component definitions
+            comp_matches = re.findall(r'(?:const|function)\s+([A-Z][a-zA-Z0-9]*)\s*(?:=\s*\(|\()', ocr)
+            components.extend(comp_matches)
+        
+        # Get most common components (these are likely real source files)
+        component_counter = Counter(components)
+        code_files = [name for name, count in component_counter.most_common(15) if count >= 1]
+        
+        total_code_length = 0
+        total_frames = 0
+        
+        for component_name in code_files:
+            extraction_metrics['files_attempted'] += 1
+            target_lower = component_name.lower()
+            
+            # Find frames with this component's code
+            code_frames = []
+            
+            for chunk in self.chunks:
+                ocr = chunk.get('ocr_text', '')
+                ocr_lower = ocr.lower()
+                
+                if target_lower in ocr_lower:
+                    has_code = any(kw in ocr_lower for kw in ['import ', 'const ', 'function ', 'export ', 'return '])
+                    if has_code and len(ocr) > 200:
+                        code_frames.append(chunk)
+            
+            if code_frames:
+                extraction_metrics['files_with_code'] += 1
+                total_frames += len(code_frames)
+                
+                # OCR text doesn't have newlines - extract code patterns directly
+                all_text = ' '.join(c.get('ocr_text', '') for c in code_frames)
+                
+                # Extract meaningful code patterns
+                import_matches = re.findall(r"import\s+\{?[\w\s,]+\}?\s+from\s+['\"][\w./-]+['\"]", all_text)
+                const_matches = re.findall(r"const\s+\w+\s*=", all_text)
+                func_matches = re.findall(r"(?:function|const)\s+\w+\s*(?:=\s*)?\([^)]*\)", all_text)
+                export_matches = re.findall(r"export\s+(?:default\s+)?\w+", all_text)
+                jsx_matches = re.findall(r"<[A-Z]\w+(?:\s+[^>]*)?(?:/>|>)", all_text)
+                
+                all_code_lines = set(import_matches + const_matches + func_matches + export_matches)
+                total_chars = len(all_text)
+                total_code_length += total_chars
+                
+                # Analyze code quality
+                has_imports = len(import_matches) > 0
+                has_exports = len(export_matches) > 0
+                has_jsx = len(jsx_matches) > 0
+                
+                extraction_metrics['extraction_results'][component_name] = {
+                    'frames_found': len(code_frames),
+                    'unique_lines': len(all_code_lines),
+                    'total_chars': total_chars,
+                    'has_imports': has_imports,
+                    'has_exports': has_exports,
+                    'has_jsx': has_jsx,
+                    'imports_found': import_matches[:5],
+                    'functions_found': func_matches[:5],
+                    'jsx_tags_found': jsx_matches[:5]
+                }
+        
+        if extraction_metrics['files_with_code'] > 0:
+            extraction_metrics['avg_code_length'] = total_code_length / extraction_metrics['files_with_code']
+            extraction_metrics['avg_frames_per_file'] = total_frames / extraction_metrics['files_with_code']
+        
+        return extraction_metrics
+    
+    # --------------------------------------------------------------------------
+    # Self-Consistency Evaluation
+    # --------------------------------------------------------------------------
+    
+    def evaluate_self_consistency(self) -> Dict:
+        """
+        Evaluate internal consistency of the extracted data.
+        - Do imports match detected files?
+        - Do components match JSX usage?
+        - Is OCR text consistent across similar frames?
+        """
+        consistency_metrics = {
+            'import_file_consistency': 0,
+            'component_jsx_consistency': 0,
+            'temporal_consistency': 0,
+            'details': {}
+        }
+        
+        # Get all detected elements
+        all_files = set()
+        all_imports = set()
+        all_components = set()
+        all_jsx = set()
+        
+        for chunk in self.chunks:
+            ocr = chunk.get('ocr_text', '')
+            if not ocr:
+                continue
+            
+            # Files
+            files = re.findall(r'(\w+)\.(?:js|jsx|ts|tsx)', ocr)
+            all_files.update(files)
+            
+            # Imports
+            imports = re.findall(r"from\s+['\"]\.?/?([^'\"]+)['\"]", ocr)
+            for imp in imports:
+                # Extract filename from path
+                parts = imp.split('/')
+                if parts:
+                    all_imports.add(parts[-1].replace('.js', '').replace('.jsx', ''))
+            
+            # Components (defined)
+            components = re.findall(r'(?:const|function)\s+([A-Z][a-zA-Z0-9]*)\s*[=\(]', ocr)
+            all_components.update(components)
+            
+            # JSX usage
+            jsx = re.findall(r'<([A-Z][a-zA-Z0-9]*)', ocr)
+            all_jsx.update(jsx)
+        
+        # Check import-file consistency
+        import_matches = len(all_imports & all_files)
+        if all_imports:
+            consistency_metrics['import_file_consistency'] = import_matches / len(all_imports)
+        
+        # Check component-JSX consistency  
+        component_matches = len(all_components & all_jsx)
+        if all_components:
+            consistency_metrics['component_jsx_consistency'] = component_matches / len(all_components)
+        
+        # Temporal consistency - check if adjacent frames have similar content
+        similar_pairs = 0
+        total_pairs = 0
+        for i in range(len(self.chunks) - 1):
+            ocr1 = self.chunks[i].get('ocr_text', '')
+            ocr2 = self.chunks[i+1].get('ocr_text', '')
+            
+            if ocr1 and ocr2:
+                total_pairs += 1
+                # Simple similarity check
+                words1 = set(re.findall(r'\w+', ocr1.lower()))
+                words2 = set(re.findall(r'\w+', ocr2.lower()))
+                if words1 and words2:
+                    overlap = len(words1 & words2) / min(len(words1), len(words2))
+                    if overlap > 0.3:  # 30% overlap threshold
+                        similar_pairs += 1
+        
+        if total_pairs > 0:
+            consistency_metrics['temporal_consistency'] = similar_pairs / total_pairs
+        
+        consistency_metrics['details'] = {
+            'unique_files': list(all_files)[:20],
+            'unique_imports': list(all_imports)[:20],
+            'unique_components': list(all_components)[:20],
+            'unique_jsx_tags': list(all_jsx)[:20]
+        }
+        
+        return consistency_metrics
+    
+    # --------------------------------------------------------------------------
+    # Run Full Evaluation
+    # --------------------------------------------------------------------------
+    
+    def run_full_evaluation(self) -> Dict:
+        """
+        Run comprehensive evaluation of the entire video.
+        """
+        print(f"\n{'='*70}")
+        print(f"FULL VIDEO EVALUATION: {self.video_id}")
+        print(f"{'='*70}")
+        
+        if not self.load_video_data():
+            return {'error': 'Failed to load video data'}
+        
+        print(f"\nVideo has {len(self.chunks)} total frames")
+        
+        # 1. OCR Quality
+        print("\n[1/5] Evaluating OCR Quality...")
+        ocr_metrics = self.evaluate_ocr_quality()
+        print(f"  - Frames with OCR: {ocr_metrics['frames_with_ocr']}/{ocr_metrics['total_frames']}")
+        print(f"  - Frames with code: {ocr_metrics['frames_with_code']}")
+        print(f"  - Detected files: {len(ocr_metrics['detected_files'])}")
+        print(f"  - Detected components: {len(ocr_metrics['detected_components'])}")
+        
+        # 2. Audio Quality
+        print("\n[2/5] Evaluating Audio Quality...")
+        audio_metrics = self.evaluate_audio_quality()
+        print(f"  - Frames with audio: {audio_metrics['frames_with_audio']}/{audio_metrics['total_frames']}")
+        print(f"  - Frames with code mentions: {audio_metrics['frames_with_code_mentions']}")
+        
+        # 3. Code Detection
+        print("\n[3/5] Evaluating Code Detection...")
+        detection_metrics = self.evaluate_code_detection()
+        print(f"  - Unique files detected: {detection_metrics['total_unique_files']}")
+        print(f"  - Unique components: {detection_metrics['total_unique_components']}")
+        
+        # 4. Retrieval Quality
+        print("\n[4/5] Evaluating Retrieval Quality...")
+        retrieval_metrics = self.evaluate_retrieval_quality()
+        print(f"  - Successful queries: {retrieval_metrics['successful_queries']}/{retrieval_metrics['queries_tested']}")
+        print(f"  - Avg results per query: {retrieval_metrics['avg_results_per_query']:.2f}")
+        
+        # 5. Code Extraction
+        print("\n[5/5] Evaluating Code Extraction...")
+        extraction_metrics = self.evaluate_code_extraction()
+        print(f"  - Files with code found: {extraction_metrics['files_with_code']}/{extraction_metrics['files_attempted']}")
+        print(f"  - Avg code length: {extraction_metrics['avg_code_length']:.0f} chars")
+        
+        # 6. Self-Consistency
+        print("\n[6/6] Evaluating Self-Consistency...")
+        consistency_metrics = self.evaluate_self_consistency()
+        print(f"  - Import-File consistency: {consistency_metrics['import_file_consistency']:.2%}")
+        print(f"  - Component-JSX consistency: {consistency_metrics['component_jsx_consistency']:.2%}")
+        print(f"  - Temporal consistency: {consistency_metrics['temporal_consistency']:.2%}")
+        
+        # Compile results
+        self.results = {
+            'video_id': self.video_id,
+            'total_frames': len(self.chunks),
+            'ocr_metrics': ocr_metrics,
+            'audio_metrics': audio_metrics,
+            'detection_metrics': detection_metrics,
+            'retrieval_metrics': retrieval_metrics,
+            'extraction_metrics': extraction_metrics,
+            'consistency_metrics': consistency_metrics,
+            'summary': self._compute_summary(ocr_metrics, audio_metrics, detection_metrics, 
+                                            retrieval_metrics, extraction_metrics, consistency_metrics)
+        }
+        
+        return self.results
+    
+    def _compute_summary(self, ocr, audio, detection, retrieval, extraction, consistency) -> Dict:
+        """Compute overall summary scores."""
+        
+        # OCR Coverage Score (0-100)
+        ocr_coverage = (ocr['frames_with_ocr'] / ocr['total_frames']) * 100 if ocr['total_frames'] > 0 else 0
+        
+        # Code Detection Score (0-100)
+        code_detection = (ocr['frames_with_code'] / ocr['total_frames']) * 100 if ocr['total_frames'] > 0 else 0
+        
+        # Retrieval Success Rate (0-100)
+        retrieval_success = (retrieval['successful_queries'] / retrieval['queries_tested']) * 100 if retrieval['queries_tested'] > 0 else 0
+        
+        # Extraction Success Rate (0-100)
+        extraction_success = (extraction['files_with_code'] / extraction['files_attempted']) * 100 if extraction['files_attempted'] > 0 else 0
+        
+        # Consistency Score (0-100)
+        consistency_score = (
+            consistency['import_file_consistency'] * 33 +
+            consistency['component_jsx_consistency'] * 33 +
+            consistency['temporal_consistency'] * 34
+        )
+        
+        # Overall System Score
+        overall_score = (
+            ocr_coverage * 0.2 +
+            code_detection * 0.2 +
+            retrieval_success * 0.25 +
+            extraction_success * 0.2 +
+            consistency_score * 0.15
+        )
+        
+        return {
+            'ocr_coverage_score': round(ocr_coverage, 2),
+            'code_detection_score': round(code_detection, 2),
+            'retrieval_success_score': round(retrieval_success, 2),
+            'extraction_success_score': round(extraction_success, 2),
+            'consistency_score': round(consistency_score, 2),
+            'overall_system_score': round(overall_score, 2)
+        }
+    
+    def print_summary(self):
+        """Print summary results."""
+        if not self.results:
+            print("No results available. Run evaluation first.")
+            return
+        
+        summary = self.results.get('summary', {})
+        
+        print(f"\n{'='*70}")
+        print("EVALUATION SUMMARY")
+        print(f"{'='*70}")
+        print(f"\nVideo: {self.video_id}")
+        print(f"Total Frames: {self.results['total_frames']}")
+        
+        print(f"\n--- Scores (0-100) ---")
+        print(f"OCR Coverage:        {summary.get('ocr_coverage_score', 0):.2f}%")
+        print(f"Code Detection:      {summary.get('code_detection_score', 0):.2f}%")
+        print(f"Retrieval Success:   {summary.get('retrieval_success_score', 0):.2f}%")
+        print(f"Extraction Success:  {summary.get('extraction_success_score', 0):.2f}%")
+        print(f"Consistency:         {summary.get('consistency_score', 0):.2f}%")
+        print(f"\n{'='*40}")
+        print(f"OVERALL SYSTEM SCORE: {summary.get('overall_system_score', 0):.2f}%")
+        print(f"{'='*40}")
+        
+        # File detection summary
+        ocr = self.results.get('ocr_metrics', {})
+        print(f"\n--- Detected Content ---")
+        print(f"Files detected: {ocr.get('detected_files', [])[:10]}")
+        print(f"Components: {ocr.get('detected_components', [])[:10]}")
+        print(f"Functions: {ocr.get('detected_functions', [])[:10]}")
+    
+    def generate_latex_tables(self) -> str:
+        """Generate LaTeX tables for thesis."""
+        if not self.results:
+            return "No results available"
+        
+        summary = self.results.get('summary', {})
+        ocr = self.results.get('ocr_metrics', {})
+        retrieval = self.results.get('retrieval_metrics', {})
+        extraction = self.results.get('extraction_metrics', {})
+        
+        latex = f"""
+\\begin{{table}}[h]
+\\centering
+\\caption{{Full Video Evaluation Results - {self.video_id}}}
+\\label{{tab:full_video_eval}}
+\\begin{{tabular}}{{|l|c|}}
+\\hline
+\\textbf{{Metric}} & \\textbf{{Score}} \\\\
+\\hline
+Total Frames Analyzed & {self.results['total_frames']} \\\\
+Frames with OCR Text & {ocr.get('frames_with_ocr', 0)} \\\\
+Frames with Code Detected & {ocr.get('frames_with_code', 0)} \\\\
+Unique Files Detected & {len(ocr.get('detected_files', []))} \\\\
+Unique Components Detected & {len(ocr.get('detected_components', []))} \\\\
+\\hline
+OCR Coverage Score & {summary.get('ocr_coverage_score', 0):.2f}\\% \\\\
+Code Detection Score & {summary.get('code_detection_score', 0):.2f}\\% \\\\
+Retrieval Success Rate & {summary.get('retrieval_success_score', 0):.2f}\\% \\\\
+Extraction Success Rate & {summary.get('extraction_success_score', 0):.2f}\\% \\\\
+Consistency Score & {summary.get('consistency_score', 0):.2f}\\% \\\\
+\\hline
+\\textbf{{Overall System Score}} & \\textbf{{{summary.get('overall_system_score', 0):.2f}\\%}} \\\\
+\\hline
+\\end{{tabular}}
+\\end{{table}}
+
+\\begin{{table}}[h]
+\\centering
+\\caption{{Retrieval Evaluation Results}}
+\\label{{tab:retrieval_eval}}
+\\begin{{tabular}}{{|l|c|c|}}
+\\hline
+\\textbf{{Query}} & \\textbf{{Results}} & \\textbf{{Top Score}} \\\\
+\\hline
+"""
+        for query, result in retrieval.get('query_results', {}).items():
+            if isinstance(result, dict) and 'num_results' in result:
+                latex += f"{query[:25]} & {result['num_results']} & {result['top_score']:.4f} \\\\\n"
+        
+        latex += """\\hline
+\\end{tabular}
+\\end{table}
+
+\\begin{table}[h]
+\\centering
+\\caption{Code Extraction Results}
+\\label{tab:extraction_eval}
+\\begin{tabular}{|l|c|c|c|}
+\\hline
+\\textbf{Component} & \\textbf{Lines} & \\textbf{Chars} & \\textbf{Frames} \\\\
+\\hline
+"""
+        for filename, result in extraction.get('extraction_results', {}).items():
+            if isinstance(result, dict) and 'total_chars' in result:
+                latex += f"{filename[:15]} & {result.get('unique_lines', 0)} & {result.get('total_chars', 0)} & {result.get('frames_found', 0)} \\\\\n"
+        
+        latex += """\\hline
+\\end{tabular}
+\\end{table}
+"""
+        return latex
+    
+    def save_results(self, filepath: str = None):
+        """Save results to JSON file."""
+        if not self.results:
+            print("No results to save")
+            return
+        
+        if filepath is None:
+            filepath = os.path.join(self.output_folder, f"{self.video_id}_full_evaluation.json")
+        
+        # Convert sets to lists for JSON serialization
+        def convert_sets(obj):
+            if isinstance(obj, set):
+                return list(obj)
+            elif isinstance(obj, dict):
+                return {k: convert_sets(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [convert_sets(item) for item in obj]
+            return obj
+        
+        serializable = convert_sets(self.results)
+        
+        with open(filepath, 'w') as f:
+            json.dump(serializable, f, indent=2)
+        
+        print(f"\nResults saved to: {filepath}")
+
+
+# ==============================================================================
+# MAIN EXECUTION
+# ==============================================================================
+
+if __name__ == '__main__':
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Full Video Evaluation')
+    parser.add_argument('--video-id', type=str, default='tomUWcQ0P3k',
+                       help='Video ID to evaluate')
+    parser.add_argument('--backend-url', type=str, default='http://localhost:5001',
+                       help='Backend URL')
+    parser.add_argument('--generate-latex', action='store_true',
+                       help='Generate LaTeX tables')
+    
+    args = parser.parse_args()
+    
+    print("\n" + "="*70)
+    print("MULTIMODAL VIDEO RETRIEVAL - FULL VIDEO EVALUATION")
+    print("="*70)
+    evaluator = FullVideoEvaluator(
+        video_id=args.video_id,
+        backend_url=args.backend_url
+    )
+    if evaluator.load_video_data():
+        evaluator.run_full_evaluation()
+        evaluator.print_summary()
+        evaluator.save_results()
+        # Save diagram as image file
+        diagram_path = os.path.join(evaluator.output_folder, f"{args.video_id}_evaluation_diagram.png")
+        evaluator.plot_evaluation_results(save_path=diagram_path, show_plot=False)
+        print(f"Diagram saved to: {diagram_path}")
+        if args.generate_latex:
+            latex = evaluator.generate_latex_tables()
+            latex_path = os.path.join(evaluator.output_folder, f"{args.video_id}_evaluation_tables.tex")
+            with open(latex_path, 'w') as f:
+                f.write(latex)
+            print(f"LaTeX tables saved to: {latex_path}")
+    print("\n✓ Full video evaluation complete!")

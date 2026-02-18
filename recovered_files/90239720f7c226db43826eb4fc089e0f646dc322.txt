@@ -1,0 +1,1086 @@
+{
+  "video_id": "ZcW_fbdWRBw",
+  "total_keyframes": 135,
+  "chunks": [
+    {
+      "index": 0,
+      "timestamp": 0.0,
+      "ocr_text": "",
+      "audio_context": "Hey there, welcome to my YouTube channel WebDev Campus. In this video series we will create this amazing modern looking personal portfolio website",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0000_0.00s.jpg",
+      "change_score": 100.0
+    },
+    {
+      "index": 1,
+      "timestamp": 19.9,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4 vercel.app #about Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Youtul Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati: https //yt-portfolio-website4.vercel.app/#about",
+      "audio_context": "You can preview the complete website by using the link available in the description and comment section. In the previous video we've designed the header section. You can find section wise videos and complete playlist link in the description and comments. In this video we'll create the home section of the website.",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0001_19.90s.jpg",
+      "change_score": 23.49035011574074
+    },
+    {
+      "index": 2,
+      "timestamp": 26.4,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #services Monica Taylor Home About Services Testimonial Contact About Me Tm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur nulla id iusto laboriosam nam: Read more https://yt-portfolio-website4.vercel app/#services",
+      "audio_context": "You can find section wise videos and complete playlist link in the description and comments. In this video we'll create the home section of the website. Make sure to like this video, share and subscribe to the channel for more such amazing tutorial videos.",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0002_26.40s.jpg",
+      "change_score": 28.90787037037037
+    },
+    {
+      "index": 3,
+      "timestamp": 35.3,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercelapp #testimonials Monica Taylor Home About Services Testimonial Contact Web Development Lorem; ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias UIUX Design App Development Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero dolor",
+      "audio_context": "Make sure to like this video, share and subscribe to the channel for more such amazing tutorial videos. Enjoy the video.",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0003_35.30s.jpg",
+      "change_score": 32.201743344907406
+    },
+    {
+      "index": 4,
+      "timestamp": 42.6,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app #contact Monica Taylor Home About Services Testimonial Cpntact Testimonals Marilyn Julia Aleksa Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at? Lorem ipsum dolor; sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at? Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0004_42.60s.jpg",
+      "change_score": 37.653327546296296
+    },
+    {
+      "index": 5,
+      "timestamp": 48.1,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4 vercel.app #contact Monica Taylor Home About Services Testimonial Contact Full Name Email Address Phone Number Email Subject Your Message Send Message",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0005_48.10s.jpg",
+      "change_score": 22.884577546296295
+    },
+    {
+      "index": 6,
+      "timestamp": 54.0,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel app #home Monica Taylor Home About Services Testimonial Contact Contact Me Full Name Email Address Phone Number Email Subject Your Message Send Message https://yt-portfolio-website4.vercel.app/#home",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0006_54.00s.jpg",
+      "change_score": 22.43621238425926
+    },
+    {
+      "index": 7,
+      "timestamp": 56.3,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercel.app Monica Taylor Home About Services Testimonial Contact Phone Number Email Subject Your Message 4 4 Send Message Monica Taylor AII Rights Reserved",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0007_56.30s.jpg",
+      "change_score": 46.22366898148148
+    },
+    {
+      "index": 8,
+      "timestamp": 57.6,
+      "ocr_text": "Monica Taylor - Portfolio % yt-portfolio-website4 vercel.app #home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Blockchain] Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati.",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0008_57.60s.jpg",
+      "change_score": 17.186552372685185
+    },
+    {
+      "index": 9,
+      "timestamp": 58.6,
+      "ocr_text": "Monica Taylor Portfolio > C Q 96 yt-portfolio-website4 vercel app/#home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Blockchain Developel Lorem ipsum dolor sit, amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati:",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0009_58.60s.jpg",
+      "change_score": 19.46908275462963
+    },
+    {
+      "index": 10,
+      "timestamp": 59.7,
+      "ocr_text": "Monica Taylor_ Portfolio 0 X 00 yt-portfolio-website4 vercel app #home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Blockchain Developer Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati:",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0010_59.70s.jpg",
+      "change_score": 81.03862123842593
+    },
+    {
+      "index": 11,
+      "timestamp": 73.0,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4.vercelapp #about Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Frontend Devell Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati. https //yt-portfolio-website4 vercel app/#about",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0011_73.00s.jpg",
+      "change_score": 29.635756655092592
+    },
+    {
+      "index": 12,
+      "timestamp": 78.9,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel.app #services Monica Taylor Home About Serices Testimonial Contact About Me Fm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur nulla id iusto laboriosam nam Read more https //yt-portfolio-website4.vercel.app/#services",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0012_78.90s.jpg",
+      "change_score": 19.13778935185185
+    },
+    {
+      "index": 13,
+      "timestamp": 82.5,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-website4 vercel.app #services Monica Taylor Home About Services Testimonial Contact Web Development UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem; nemo quod recusandae officiis molestias. Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0013_82.50s.jpg",
+      "change_score": 30.482805266203705
+    },
+    {
+      "index": 14,
+      "timestamp": 86.6,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #testimonials Monica Taylor Home About Services Testimonial Contact Web Development UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem; nemo quod recusandae officiis molestias: Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum p",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0014_86.60s.jpg",
+      "change_score": 23.108268229166665
+    },
+    {
+      "index": 15,
+      "timestamp": 88.1,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel app #testimonials Monica Taylor Home About Services Testimonial Contact Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0015_88.10s.jpg",
+      "change_score": 16.22894965277778
+    },
+    {
+      "index": 16,
+      "timestamp": 89.1,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #testimonials Monica Taylor Home About Services Testimonial Contact Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at? Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0016_89.10s.jpg",
+      "change_score": 16.22390769675926
+    },
+    {
+      "index": 17,
+      "timestamp": 92.5,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercel.app #contact Monica Taylor Home About Services Testimonial Coilact Lorem ipsum dolor; sit amet consectetur adipisicing elit. Eius reiciendis consequatur officia recusandae porro at? Contact Me Full Name Email Address Phone Number Email Subject https /lyt-portfolio-website4 vercel appl#contact",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0017_92.50s.jpg",
+      "change_score": 16.207429108796298
+    },
+    {
+      "index": 18,
+      "timestamp": 98.9,
+      "ocr_text": "Monica Taylor Portfolio 8 yt-portfolio-website4.vercelapp #contact Monica Taylor Home About Services Testimonial Contact Full Name Email Address Phone Number Email Subject Your Message Send Message",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0018_98.90s.jpg",
+      "change_score": 19.09929832175926
+    },
+    {
+      "index": 19,
+      "timestamp": 99.9,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4.vercelapp #contact Monica Taylor Home About Services Testimonial Contact Phone Number Email Subject Iour Message Send Message Monica Taylor AII Rights Reserved",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0019_99.90s.jpg",
+      "change_score": 17.12481915509259
+    },
+    {
+      "index": 20,
+      "timestamp": 103.8,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel.app #home Monica Taylor Home About Services Testimonial Contact Contact Me Full Name Email Address Phone Number Email Subject Your Message https I/yt-portfolio-website4 vercel app/#home",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0020_103.80s.jpg",
+      "change_score": 17.22319878472222
+    },
+    {
+      "index": 21,
+      "timestamp": 105.9,
+      "ocr_text": "Monica Taylor Portfolio 06 yt-portfolio-website4 vercel.app #home Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Tm a Blockchain Developerl Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi; doloremque, veritatis voluptatibus aspernatur necessitatibus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati_",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0021_105.90s.jpg",
+      "change_score": 117.4749927662037
+    },
+    {
+      "index": 22,
+      "timestamp": 110.1,
+      "ocr_text": "Monica Taylor Portfolio 00 yt-portfolio-web_ 6 Monica Taylor Home About Service Testimd Contact 3 S Hello, Myself Monica Taylor And Tm a Web Designerl Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi veritatis voluptatibus aspernatur necessitatibus earum aliqua",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0022_110.10s.jpg",
+      "change_score": 17.16466290509259
+    },
+    {
+      "index": 23,
+      "timestamp": 112.7,
+      "ocr_text": "Monica Taylor - Portfolio 00 yt-portfolio-web_ Q Monica Taylor Hello, Myself Monica Taylor And Im a Youtubel Lorem ipsum dolor sit, amet consectetur adipisicing elit: Modi, doloremqu veritatis voluptatibus aspernatur necessitatibus earumaliquam ipsa repel",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0023_112.70s.jpg",
+      "change_score": 21.72357494212963
+    },
+    {
+      "index": 24,
+      "timestamp": 113.9,
+      "ocr_text": "Monica Taylor - Portfolio 00 yt-portfolio-web_ Q Monica Taylor Hello; Myself Monica Taylor And Im a Youtuber Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, doloremque veritatis voluptatibus aspernatur necessitatibus earum; aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati.",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0024_113.90s.jpg",
+      "change_score": 24.103501157407408
+    },
+    {
+      "index": 25,
+      "timestamp": 122.7,
+      "ocr_text": "Monica Taylor Portfolio C 0 06 yt-portfolio-web. @ Monica Taylor Home Aboul Servil Testir Hello; Myself Monica Taylor And Tm a Backend Developerl Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, do veritatis voluptatibus aspernatur necessitatibus earum, aliquam iusto esse laudantium animi vitae consectetur obcaecati. Conta",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0025_122.70s.jpg",
+      "change_score": 15.782183159722223
+    },
+    {
+      "index": 26,
+      "timestamp": 123.9,
+      "ocr_text": "Monica Taylor Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor Hon Abo Ser Hello, Myself Monica Taylor And Im a Backend Develol Lorem ipsum dolor sit; amet consectetur adipisicing elit: Modi, dolor veritatis voluptatibus aspernatur necessitatibus earum, aliquam ips? iusto esse laudantium animi vitae consectetur obcaecati: Test Con vercel appl[",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0026_123.90s.jpg",
+      "change_score": 38.32759693287037
+    },
+    {
+      "index": 27,
+      "timestamp": 125.4,
+      "ocr_text": "Monica Taylor Portfolio C 0 06 yt-portfolio-web @ Monica Taylor About Me Im a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur nulla id iusto laboriosam nam: Read more",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0027_125.40s.jpg",
+      "change_score": 35.057703993055554
+    },
+    {
+      "index": 28,
+      "timestamp": 129.4,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ 0 Monica Taylor Home About Services Testimon Contact About Me Fm a Frontend Developer Lorem ipsum dolor sit amet consectetur adipisicing elit pariatur nulla id iusto laboriosam nam Read more",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0028_129.40s.jpg",
+      "change_score": 21.74140625
+    },
+    {
+      "index": 29,
+      "timestamp": 130.8,
+      "ocr_text": "Monica Taylor - Portfolio C 0 00 yt-portfolio-web_ 0 Monica Taylor Home About rvices Testimonial Contact About Me Im a Frontend Develop Lorem ipsum dolor sit amet consectetur adipi pariatur nulla id iusto laboriosam nam. Read more vercel appl]",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0029_130.80s.jpg",
+      "change_score": 20.31613136574074
+    },
+    {
+      "index": 30,
+      "timestamp": 133.8,
+      "ocr_text": "Monica Taylor - Portfolio C Q 00 yt-portfolio-web_ 0 Monica Taylor Web Development Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem nemo quod recusandae officiis molestias_ Read More UIJUX Design Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0030_133.80s.jpg",
+      "change_score": 20.663042534722223
+    },
+    {
+      "index": 31,
+      "timestamp": 134.8,
+      "ocr_text": "Monica Taylor - Portfolio C Q 00 yt-portfolio-web_ 0 Monica Taylor UIIUX Design Lorem, ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ Read More App Development Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0031_134.80s.jpg",
+      "change_score": 16.099580439814815
+    },
+    {
+      "index": 32,
+      "timestamp": 137.0,
+      "ocr_text": "Monica Taylor Portfolio C Q 00 yt-portfolio-web_ Monica Taylor Home UIIUX Design Lorem, ipsum dolor sit amet consectetur Similique blanditiis laudantium at repudia magni libero doloremque earum porro autes recusandae officiis molestias About Services Read More Testimonial Contact App Developmen Lorem; ipsum dolor sit amet consectetur Similique blanditiis laudantium at repudian magni libero doloremque earum porro autes recusandae officiis molestias Read More",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0032_137.00s.jpg",
+      "change_score": 18.706025752314815
+    },
+    {
+      "index": 33,
+      "timestamp": 138.4,
+      "ocr_text": "Monica Taylor Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor similique blanaltls Iaudanitium al repudlandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias. Read More App Development Lorem; ipsum dolor sit amet consectetur adipisicing elit: Similique blanditiis laudantium at repudiandae corporis magni libero doloremque earum porro autem, nemo quod recusandae officiis molestias_ Read More vercelappl]",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0033_138.40s.jpg",
+      "change_score": 41.86778790509259
+    },
+    {
+      "index": 34,
+      "timestamp": 139.6,
+      "ocr_text": "Monica Taylor Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor Marilyn Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0034_139.60s.jpg",
+      "change_score": 20.27038483796296
+    },
+    {
+      "index": 35,
+      "timestamp": 140.6,
+      "ocr_text": "Monica Taylor Portfolio C Q 06 yt-portfolio-web_ 0 Monica Taylor Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0035_140.60s.jpg",
+      "change_score": 15.419285300925926
+    },
+    {
+      "index": 36,
+      "timestamp": 141.6,
+      "ocr_text": "Monica Taylor Portfolio C 0 00 yt-portfolio-web_ @ Monica Taylor Aleksa Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur offiffia recusandae porro at?",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0036_141.60s.jpg",
+      "change_score": 17.811140046296295
+    },
+    {
+      "index": 37,
+      "timestamp": 152.9,
+      "ocr_text": "Monica Taylor- Portfolio C Q 00 yt-portfolio-web_ @ Monica Taylor Julia Lorem ipsum dolor; sit amet consectetur adipisicing elit: Eius reiciendis consequatur officia recusandae porro at? 3 S Aleksa vercelappl]",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0037_152.90s.jpg",
+      "change_score": 15.461588541666666
+    },
+    {
+      "index": 38,
+      "timestamp": 154.3,
+      "ocr_text": "Hnalna IZma= Woma @bo DEmal=",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0038_154.30s.jpg",
+      "change_score": 56.142549189814815
+    },
+    {
+      "index": 39,
+      "timestamp": 184.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home divhome-img <html lang= en\" > 10 <body> 14 <header class= 'header 17 <1 class='bx bX-menu id= 'menu-icon xli> 18 19 <nav class= navbar 20 ka href=\"#home >Home</a> 21 ka href= #about\" >About</a> 22 ka href-\"#services >Servicesk/a> 23 ka href-\"#testimonial\" Testimonial</a> 24 <a href-\"#contact >Contactk/a> 25 Inav> 26 Iheader> 27 28 <! - Home Section Code 29 30 <section class= 'home id-",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0039_184.30s.jpg",
+      "change_score": 5.601613136574074
+    },
+    {
+      "index": 40,
+      "timestamp": 193.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website EXPLORER indexhtml X style.csS scriptjs PORTFOLIO WEBSITE D+ E 0 & assets indexhtml scriptjs style.css indexhtml html body section#home home div.home-img img <html lang= en\" > 10 <body- 14 <header class= 'header 17 <1 class= bx bX-menu id= 'menu-icon xli> 18 19 <nav class= navbar\" > 20 <a href=\"#home >Home</a> 21 <a href=\"#about\" About</a> 22 <a href-\"#services >Servicesk/a> 23 <a href-\"#testimonial\" Testimonial</a> 24 <a href-\"#contact >Contactk/a> ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0040_193.70s.jpg",
+      "change_score": 26.913469328703705
+    },
+    {
+      "index": 41,
+      "timestamp": 196.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#home home divhome-img img <html lang= en\" > 10 body> 14 <header class= 'header 17 <1 class= bx bX-menu id= 'menu-icon xli> 18 19 <nav class= navbar 20 <a href=\"#home >Home</a> 21 <a href=\"#about\" About</a> 22 ka href-\"#services >Servicesk/a> 23 <a href-\"#testimonial\" Testimonial</a> 24 <a href-\"#contact >Contactk/a> 25 Inav> 26 Iheader> 27 28 <! Home Section Code 29 30 <section class= 'home i",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0041_196.40s.jpg",
+      "change_score": 27.374377893518517
+    },
+    {
+      "index": 42,
+      "timestamp": 199.0,
+      "ocr_text": "Monica Taylor_ Portfolio Boxicons Premium web friendly icor 0 X 127.0.0.1.5500/indexhtml",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0042_199.00s.jpg",
+      "change_score": 231.23455584490742
+    },
+    {
+      "index": 43,
+      "timestamp": 201.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home <html lang= en\" > 10 <body> 14 <header class= 'header\" > 19 <nav class-\"navbar div.home-img img 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 <a href-\"#contact >Contactk/a> Inav> Iheader> Home Section Code <section class-\"home id-=\"home (div class= home - img img src-\"assets/Profile _ jpeg\" alt-\"Profile Imagef </div> Isection> body Ihtml> 00^ 0 Ln 32, Col 62 Spaces: 4 UTF-8 CRLF HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0043_201.20s.jpg",
+      "change_score": 218.44975405092592
+    },
+    {
+      "index": 44,
+      "timestamp": 231.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home <html lang= en\" > 10 <body_ 14 <header class= 'header\" 19 <nav class= navbar divhome-content 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 <a href-\"#contact >Contactk/a> <Inav> Iheader> Home Section Code <section class-\"home id=\"home (div class= 'home-img' <img src= assets/Profile.jpeg\" alt-\"Profile Image\" > <Idiv> <div class= 'home-content\"> <h3xHello, Myself</h3> <h",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0044_231.20s.jpg",
+      "change_score": 0.0
+    },
+    {
+      "index": 45,
+      "timestamp": 243.8,
+      "ocr_text": "Monica Taylor- Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0045_243.80s.jpg",
+      "change_score": 226.34680989583333
+    },
+    {
+      "index": 46,
+      "timestamp": 246.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home.home divhome-content h3 <html lang= en\" > 10 <body> 14 <header class= 'header 19 <nav class-\"navbar 24 <a href-\"#contact >Contactk/a> 25 Inav> 26 Iheader> 27 28 K! Home Section Code 29 30 <section class-\"home id-=\"home 31 <div class-\"home-img 32 <img src-\"assets/Profile.jpeg' alt-\"Profile Image\" > 33 <Idiv> 34 35 <div class= 'home-content\"> 36 <h3 Hello, Myself</h3> 37 <hl Monica Taylor<",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0046_246.30s.jpg",
+      "change_score": 226.51749855324073
+    },
+    {
+      "index": 47,
+      "timestamp": 257.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home divhome-content h3 span multiple-text <html lang= en\" > 10 body> 28 Home section Coae 29 30 <section class= 'home id-\"home 31 <div class-\"home-img\" 32 img Src= assets/Profile.jpeg\" alt-\"Profile Image 33 <Idiv> 34 35 <div class-\"home-content\" > 36 <h3 Hello, Myself</h3> 37 <hl>Monica Taylor</hl> 38 <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> 39 <Idiv> 40 section",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0047_257.00s.jpg",
+      "change_score": 15.988288483796296
+    },
+    {
+      "index": 48,
+      "timestamp": 266.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home divhome-content 10 30 33 34 35 36 37 38 39 40 41 42 43 44 45 tium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictalk/ 00^ 0 Ln 39,Col 196 Spaces: 4 UTF-8 CRLF HTML Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0048_266.70s.jpg",
+      "change_score": 15.014945023148147
+    },
+    {
+      "index": 49,
+      "timestamp": 273.2,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0049_273.20s.jpg",
+      "change_score": 230.9974609375
+    },
+    {
+      "index": 50,
+      "timestamp": 275.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.cs scriptjs indexhtml html body section#home.home divhome-content <html lang= en\" > 12 <body> 32 <section class= 'home id-\"home 36 37 <div class= 'home-content 38 <h3xHello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text\" >Web Developer<_ span></h3> 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Officiis quas minus! Explicabo",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0050_275.10s.jpg",
+      "change_score": 227.24661458333333
+    },
+    {
+      "index": 51,
+      "timestamp": 293.6,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minusl Explicabo facilis Iibero repellat dicta)",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0051_293.60s.jpg",
+      "change_score": 227.46206597222223
+    },
+    {
+      "index": 52,
+      "timestamp": 294.6,
+      "ocr_text": "Monica Taylor - Portfolio Boxicons 'remium web friendl} 0 X 06 boxicons com/?query-menu menu All Categories 5 of 1634 icons AII Regular Solid Logos food-menu food-menu menu menu-alt-left menu-alt-right menu Web Component Font Usage class= bx bx-menu' ></i> 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0052_294.60s.jpg",
+      "change_score": 128.60873842592594
+    },
+    {
+      "index": 53,
+      "timestamp": 297.7,
+      "ocr_text": "Monica Taylor - Portfolio Boxicons Premium web friendl} 06 boxicons com/?query-link Boxicons Github Usage v2.1.4 High Quality Web Icons Simple Open Source icons carefully crafted for designers & developers menu O linkl Web Component Font Usage AIl Categories of 1634 icons class= bx bx-menu' ></i> 24 pX PNG SVG CODE HTML in linkedin link-alt; link link-external",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0053_297.70s.jpg",
+      "change_score": 21.63318865740741
+    },
+    {
+      "index": 54,
+      "timestamp": 298.7,
+      "ocr_text": "Monica Taylor - Portfolio Boxicons Premium web friendly 0 X 00 boxicons com /?query-link Simple Open Source icons carefully crafted for designers & developers link All Categories of 1634 icons AII Regular Solid Logos in linkedin link-alt link link-external linkedin-square unlink menu Web Component Font Usage class= bx bx-menu' ></i> 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0054_298.70s.jpg",
+      "change_score": 18.340053530092593
+    },
+    {
+      "index": 55,
+      "timestamp": 301.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home divhome-content div social-media <html lang= en\" > 12 <body_ 32 <section class= 'home id-\"home 36 37 <div class= 'home-content 38 <h3 Hello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text\" >Web Developer< span></h3> 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Officiis quas m",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0055_301.00s.jpg",
+      "change_score": 235.35420283564815
+    },
+    {
+      "index": 56,
+      "timestamp": 307.5,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 0 X 06 boxicons com /?query-link link All Categories of 1634 icons AII Regular Solid Logos in linkedin link-alt; link link-external linkedin-square unlink linkedin Web Component Font Copied Usage class= bx bxl-linkedin xk/i> in 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0056_307.50s.jpg",
+      "change_score": 235.43069299768518
+    },
+    {
+      "index": 57,
+      "timestamp": 309.3,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 06 boxicons com/?query-gi Boxicons Github Usage v2.1.4 High Quality Web Icons Simple Open Source icons carefully crafted for designers & developers linkedin Web Component Font Usage AIl Categories 19 of 1634 icons class= bx bxl-linkedin xki> in 24 pX PNG SVG CODE HTML GIF registered registered file-gif gitlab",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0057_309.30s.jpg",
+      "change_score": 24.32620804398148
+    },
+    {
+      "index": 58,
+      "timestamp": 310.8,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 0 X 00 boxicons com/?query-git Simple Open Source icons carefully crafted for designers & developers git All Categories 10 of 1634 icons AII Regular Solid Logos 22 git-compare gitlab git-branch git-commit linkedin Web Component Font Usage class= bx bxl-linkedin xki> in 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0058_310.80s.jpg",
+      "change_score": 17.625694444444445
+    },
+    {
+      "index": 59,
+      "timestamp": 313.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home divhome-content div social-media <html lang= en\" > 12 <body_ 32 <section class= 'home id-\"home 36 37 <div class= 'home-content 38 <h3 Hello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Officiis quas mi",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0059_313.10s.jpg",
+      "change_score": 235.25963541666667
+    },
+    {
+      "index": 60,
+      "timestamp": 314.6,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 0 X 00 boxicons com/?query-git Simple Open Source icons carefully crafted for designers & developers git All Categories 10 of 1634 icons AII Regular Solid Logos 22 git-compare gitlab git-branch git-commit git-merge git-pull-request git-repo-forked github digitalocean git github Web Component Font Usage class= bx bxl-github xk/i> 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0060_314.60s.jpg",
+      "change_score": 226.18755787037037
+    },
+    {
+      "index": 61,
+      "timestamp": 316.1,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 00 boxicons com/?query-fa Boxicons Github Usage v2.1.4 High Quality Web Icons Simple Open Source icons carefully crafted for designers & developers fad github Web Component Font Usage All Categories 8 of 1634 icons class= bx bxl-github xk/i> 24 pX PNG SVG CODE HTML meta face face facebook-circle",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0061_316.10s.jpg",
+      "change_score": 25.29942853009259
+    },
+    {
+      "index": 62,
+      "timestamp": 319.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#home.home divhome-content div social-media ibxbxl-github <html lang= en\" > 12 <body_ 32 <section class= home id-\"home 36 37 <div class= 'home-content 38 <h3 Hello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text\" >Web Developer< span></h3_ 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Of",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0062_319.00s.jpg",
+      "change_score": 235.8445023148148
+    },
+    {
+      "index": 63,
+      "timestamp": 321.6,
+      "ocr_text": "Monica Taylor - Portfolio Boxicons Premium web friendl} 00 boxicons com/?query-face Simple Open Source icons carefully crafted for designers & developers face All Categories 7 of 1634 icons AII Regular Solid Logos meta face face facebook-circle facebook facebook-squa; face-mask facebook Web Component Font Copied Usage class= bx bxl-facebook xk[i> 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0063_321.60s.jpg",
+      "change_score": 226.6306351273148
+    },
+    {
+      "index": 64,
+      "timestamp": 323.2,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 00 boxiconscom/?query=in Boxicons Github Usage v2.1.4 High Quality Web Icons Simple Open Source icons carefully crafted for designers & developers facebook inl Web Component Font Usage AIl Categories 229 of 1634 icons class= bx bxl-facebook xk[i> 24 pX PNG SVG CODE HTML shield-minus shield-minus xing invader",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0064_323.20s.jpg",
+      "change_score": 27.117238136574073
+    },
+    {
+      "index": 65,
+      "timestamp": 324.2,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendl} 0 X 00 boxicons com/?query-insta High Quality Web Icons Simple Open Source icons carefully crafted for designers & developers 0 insta All Categories 2 of 1634 icons AII Regular Solid Logos facebook Web Component Font Usage instagram-alt instagram class= bx bxl-facebook xi> 24 pX PNG SVG CODE HTML",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0065_324.20s.jpg",
+      "change_score": 27.450007233796295
+    },
+    {
+      "index": 66,
+      "timestamp": 326.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#home.home divhome-content div social-media ibxbxl-facebook <html lang= en\" > 12 <body_ 32 <section class= 'home id-\"home 36 37 <div class= 'home-content 38 <h3xHello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text >Web Developer<_ span></h3_ 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0066_326.60s.jpg",
+      "change_score": 233.3379123263889
+    },
+    {
+      "index": 67,
+      "timestamp": 329.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home <html lang= en 12 body> 32 <section class= 'home id-\"home 36 37 38 39 40 indexhtml Portfolio Website Visual. 41 42 43 44 45 46 47 48 49 50 51 section> 52 53 54 body 55 56 Ihtml> divhome-content div social-media ibxbxl-instagram IaEGeEE IEES Boxicons Premium web friendly icons_. OBS 30.1.2 Profile: Untitled Scenes:_. 'rror High Quality Web Icons 00^ 0 Ln 48, Col 62 Spaces: 4 UTF-8 CR",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0067_329.60s.jpg",
+      "change_score": 72.97727141203704
+    },
+    {
+      "index": 68,
+      "timestamp": 330.7,
+      "ocr_text": "Monica Taylor Portfolia Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minusl Explicabo facilis Iibero repellat dicta) in 0",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0068_330.70s.jpg",
+      "change_score": 131.55938946759258
+    },
+    {
+      "index": 69,
+      "timestamp": 335.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#home home divhome-content div.social-media ibxbxl-instagram <html lang= en\" > 12 body_ 32 <section class= home id-\"home 36 37 <div class= 'home-content 38 <h3 Hello, Myselfk/h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text >Web Developer<_ 'span></h3_ 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architec",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0069_335.00s.jpg",
+      "change_score": 217.0225115740741
+    },
+    {
+      "index": 70,
+      "timestamp": 336.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home divhome-content div social-media ibxbxl-instagram <html lang= en\" > 12 <body> 32 <section class= home id-\"home 37 <div class= home-content 38 <h3xHello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> 41 <pLorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Off",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0070_336.10s.jpg",
+      "change_score": 15.355707465277778
+    },
+    {
+      "index": 71,
+      "timestamp": 348.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs indexhtml html body section#home home divhome-content a.btn <html lang= en\" > 12 <body> 32 <section class= home id-\"home 37 <div class= home-content 39 <hl>Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Officiis quas minus! Explicabo facilis libero repellat dic",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0071_348.70s.jpg",
+      "change_score": 16.93113425925926
+    },
+    {
+      "index": 72,
+      "timestamp": 354.7,
+      "ocr_text": "Monica Taylor- Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dicta in 0",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0072_354.70s.jpg",
+      "change_score": 217.35675636574075
+    },
+    {
+      "index": 73,
+      "timestamp": 357.2,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icot 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Monica Taylor Portfolio Brave indexhtml Portfolio Website Visual_ OBS 30.1.2 Profile: Untitled Scenes: Monic * Toylor Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus Explicabo facilis Iibero repellat dicta in Q CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0073_357.20s.jpg",
+      "change_score": 63.62296730324074
+    },
+    {
+      "index": 74,
+      "timestamp": 359.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home divhome-content a.btn <html lang= en\" > 12 <body> 32 <section class= 'home id-\"home 33 <div class-\"home-img' 35 <Idiv> 36 37 <div class=\"home-content 38 <h3 Hello, Myselfk</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text\">Web Developer<_ 'span></h3> 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0074_359.00s.jpg",
+      "change_score": 22.269950810185186
+    },
+    {
+      "index": 75,
+      "timestamp": 360.5,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style gss X scriptjs style.csS %z #menu-icon 64 tont-size: 1.9rem; 65 color: var(--bg-color) ; 66 margin-left: 4rem; 67 font-weight: 700; 68 transition: 0.35 ease; 69 70 71 navbar a:hover , 72 navbar a.active { 73 color: var(--text-color); 74 75 76 #menu-icon { 77 font-size: 3.6rem; 78 color: var(--bg-color); 79 cursor: pointer; 80 display: none; 81 0 0 ^ 0 Ln 81, Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0075_360.50s.jpg",
+      "change_score": 24.563302951388888
+    },
+    {
+      "index": 76,
+      "timestamp": 371.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home home div.home-content a.btn 19 <1 class='bx bX-menu id= 'menu-icon xli> Bet 20 21 <nav class= 'navbar EGpzs luee 22 <a href=\"#home >Home< /a> 23 <a href-\"#about >About</a> 24 ka href=\"#services\" Services</a> 25 ka href-\"#testimonial\">Testimonialk/a> 26 <a href-\"#contact\" Contactk/a> 27 <nav> 28 Iheader> 29 30 <! Home Section Code 31 32 <section class= 'home id-\"home 33 <div class= 'home-",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0076_371.70s.jpg",
+      "change_score": 34.31948784722222
+    },
+    {
+      "index": 77,
+      "timestamp": 373.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css % 75 76 77 78 79 80 81 82 83 84 85 #menu-icon { font-size: 3.6rem; color: var(--bg-color)_ cursor: pointer; display: none; Home Section Code */ 014 0 Ln 85, Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0077_373.60s.jpg",
+      "change_score": 34.15101273148148
+    },
+    {
+      "index": 78,
+      "timestamp": 381.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css %z home 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 #menu-icon { font-size: 3.6rem; color: var(--bg-color); cursor: pointer; display: none; Home Section Code *1 home display: flex; justify-content: center; alii align-items animation-timeline Aligns flex items along the cross axis of the X current line of the flex container. (Edge 12, Firefox 20, Safari 9, Chrome 29, IE 11, Opera 16) Syntax: normal stretch <base",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0078_381.00s.jpg",
+      "change_score": 15.723155381944444
+    },
+    {
+      "index": 79,
+      "timestamp": 383.0,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer orem ipsum dolor sit amet consectetur adipisicing elit_ At ut laudantium voluptatum fugit error Iguod saepe architecto officiis quas minus! Explicabo facilis libero repellat dicta CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0079_383.00s.jpg",
+      "change_score": 227.56118344907406
+    },
+    {
+      "index": 80,
+      "timestamp": 385.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css home 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 #menu-icon { font-size: 3.6rem; color: var(--bg-color); cursor: pointer; display: none; Home Section Code */ home { display: flex; justify-content: center; align-items: center; } 00^ 0 Ln 88, Col 24 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0080_385.20s.jpg",
+      "change_score": 228.16203703703704
+    },
+    {
+      "index": 81,
+      "timestamp": 388.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#home home 19 <1 class='bX bx-menu id= 'menu-icon x/i> Bee 20 21 <nav class= 'navbar ErreGues DDEE 22 <a href=\"#home >Homek/a> 23 <a href_\"#about >About</a> 24 <a href=\"#services >Servicesk/a> 25 <a href-\"#testimonial >Testimonialk/a> 26 <a href-\"#contact\" Contactk/a> 27 Inav> 28 Iheader> 29 30 HHomel Section Code 31 32 section class= 'homel id= home 33 <div class= 'home-img' 34 <img src-\"asse",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0081_388.10s.jpg",
+      "change_score": 29.240516493055555
+    },
+    {
+      "index": 82,
+      "timestamp": 391.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css % 84 85 86 87 88 89 90 91 home { display: flex; justify-content: center; align-items: center; 014 0 (A) 0 Ln 91, Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0082_391.30s.jpg",
+      "change_score": 33.33151041666667
+    },
+    {
+      "index": 83,
+      "timestamp": 392.9,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer orem ipsum dolor sit amet consectetur adipisicing elit_ At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus? Explicabo facilis libero repellat dicta CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0083_392.90s.jpg",
+      "change_score": 228.15970052083333
+    },
+    {
+      "index": 84,
+      "timestamp": 409.1,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Tm a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0084_409.10s.jpg",
+      "change_score": 227.74035734953705
+    },
+    {
+      "index": 85,
+      "timestamp": 410.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.csS 23 home-img img 84 85 home 86 display: flex; 87 justify-content: center; 88 align-items: center; 89 90 91 home - img img { 92 width: 25vw; 93 border-radius: 504; 94 00^ 0 Ln 93,Col 23 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0085_410.70s.jpg",
+      "change_score": 229.24212239583332
+    },
+    {
+      "index": 86,
+      "timestamp": 440.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 4s home-img img 85 home { 87 justify-content: center; 88 align-items: center; 89 90 91 home - img img 92 width: 25VW; 93 border-radius: 50%; 94 box-shadow 25px var(--main-color); 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 00^ 0 Ln 96, Col 50 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0086_440.70s.jpg",
+      "change_score": 0.0
+    },
+    {
+      "index": 87,
+      "timestamp": 470.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 8s home-img img:ho 85 home { 87 justify-content: center; 88 align-items horizontal 89 host 90 host() 91 home - img img { host-context() 92 width: 25vW hover 93 border-radiu :nth-of-type( ) 94 box-shadow logo:hover 95 cursor: poin :only-child 96 animation: :placeholder-shown 97 transition: :placeholder 98 :nth-last-of-type( ) 99 :shadow 100 home img img:t ho 101 102 } When evaluated in the context of a shadow tre",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0087_470.70s.jpg",
+      "change_score": 8.313324652777778
+    },
+    {
+      "index": 88,
+      "timestamp": 474.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css E home-img img:hover 85 home { 87 justify-content: center; 88 align-items: center; 89 90 91 home-img img { 92 width: 25Vw; 93 border-radius: 50%; 94 box-shadow 25px var( --main-color) ; 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 transition: 0.4s ease; 98 99 100 home - img img: hover 101 boxs 102 box-sizing box-shadow box lines moz-box - sizing ~webkit-box-sizing background-position-",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0088_474.80s.jpg",
+      "change_score": 16.388447627314815
+    },
+    {
+      "index": 89,
+      "timestamp": 504.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css E home-img img:hover 85 home { 87 justify-content: center; 88 align-items: center; 89 90 91 home - img img { 92 width: 25vW; 93 border-radius: 50%; 94 box-shadow: 25px var( --main-color) ; 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 transition: 0.4s ease; 98 99 100 home - img img hover 101 box-shadow: 25px var(--main-color) 102 35px var main-color)_ 103 45px var main-color) 104 I UBH",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0089_504.80s.jpg",
+      "change_score": 0.15162760416666668
+    },
+    {
+      "index": 90,
+      "timestamp": 510.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 2 home-img img:hover 85 home { 87 justify-content: center; 88 align-items: center; 89 90 91 home - img img { 92 width: 25Vw; 93 border-radius: 50%; 94 box-shadow: 25px var( --main-color) ; 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 transition: 0.4s ease; 98 99 100 home - img img: hover { 101 box-shadow: 25px var(--main-color) 102 35px var main-color)_ 103 45px var main-color); 104 }",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0090_510.60s.jpg",
+      "change_score": 235.55071614583332
+    },
+    {
+      "index": 91,
+      "timestamp": 540.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css @keyframes floatlmage 91 home-img img { 94 box-shadow: 25px var( --main-color); 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 transition: 0.4s ease; 98 99 100 home-img img:hover { 101 box-shadow: 25px var( --main-color) 102 35px var(--main-color)_ 103 45px var ~main-color) 104 105 106 @keyframes floatImage 107 0% { 108 transform: translateY(0); 109 110 50% 111 transform: translateY( -2",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0091_540.60s.jpg",
+      "change_score": 0.034801793981481484
+    },
+    {
+      "index": 92,
+      "timestamp": 548.0,
+      "ocr_text": "Monica Taylor_ Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And [m Web Developer orem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0092_548.00s.jpg",
+      "change_score": 234.78372395833333
+    },
+    {
+      "index": 93,
+      "timestamp": 555.1,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css @keyframes floatlmage 91 home-img img { 94 box-shadow 25px var( --main-color); 95 cursor: pointer; 96 animation: floatImage 4s ease-in-out infinite; 97 transition: 0.4s ease; 98 99 100 home-img img:hover { 101 box-shadow: 25px var( --main-color) 102 35px var ~main-color) 103 45px var (--main-color); 104 105 106 @keyframes floatImage { 107 0% { 108 transform: translatey(0); 109 110 50% 111 transform: translateY( ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0093_555.10s.jpg",
+      "change_score": 227.4814959490741
+    },
+    {
+      "index": 94,
+      "timestamp": 559.7,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.csS scriptjs indexhtml html body section#home.home div.home-img 19 <1 class= bx bx-menu id=\"menu-icon xk/i> Bee 20 21 <nav class=\"navbar Oerrlltes7 Mli# 22 <a href=\"#home >Home</a> 23 <a href_\"#about\" About</a> 24 <a href=\"#services\" Services<]a> 25 <a href-\"#testimonial\" Testimonialk/a> 26 <a href-\"#contact\" Contactk/a> 27 Inav> 28 Iheader> 29 30 Home Section Code 31 32 section class= 'home id-\"home\" 33 <div class= 'home-img' 34 <i",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0094_559.70s.jpg",
+      "change_score": 23.798278356481482
+    },
+    {
+      "index": 95,
+      "timestamp": 563.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css % 108 transform: translateY(0); 109 110 50% 111 transform: translateY( -2.4rem_ 112 113 100% { 114 transform: translateY(0); 115 116 117 118 Mibi 0 14 0 (A) 0 Ln 118, Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0095_563.20s.jpg",
+      "change_score": 34.15162760416667
+    },
+    {
+      "index": 96,
+      "timestamp": 571.3,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello Myself Monica Taylor And [m Web Developer orem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0096_571.30s.jpg",
+      "change_score": 227.78831741898148
+    },
+    {
+      "index": 97,
+      "timestamp": 572.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css 106 @keyframes floatImage { 109 110 50% 111 transform: translateY( -2.4rem_ 112 113 100% { 114 transform: translateY(0); 115 116 117 118 home-content { 119 margin-left: Srem; 120 121 See Alenn Hiltiatn B JbH 00^ 0 Ln 121,Col Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0097_572.80s.jpg",
+      "change_score": 227.9945457175926
+    },
+    {
+      "index": 98,
+      "timestamp": 594.1,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.550/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus Explicabo facilis libero repellat dicta Dowkrad CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0098_594.10s.jpg",
+      "change_score": 227.5214626736111
+    },
+    {
+      "index": 99,
+      "timestamp": 599.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css 106 @keyframes floatImage { 109 110 50% 111 transform: translateY( -2.4rem_ 112 113 100% { 114 transform: translateY(0); 115 116 117 118 home-content { 119 margin-left: Srem; 120 121 122 home-content h3 { 123 font-size: 3.7rem; 124 font-weight: 700; 125 126 127 E HbT 00^ 0 Ln 127,Col Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0099_599.40s.jpg",
+      "change_score": 228.01188512731483
+    },
+    {
+      "index": 100,
+      "timestamp": 620.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 4s home-content h3:nth-of-type(2) 116 117 118 home-content { 119 margin-left: Srem; 120 121 122 home-content h3 { 123 font-size: 3.7rem; 124 font-weight: 700; 125 126 127 home-content h3:nth-of-type(2) 128 margin-bottom: 2rem; 129 AnEa Eaaer 8z AeTTA 0 0 ^ 0 Ln 128,Col 24 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0100_620.80s.jpg",
+      "change_score": 16.8572265625
+    },
+    {
+      "index": 101,
+      "timestamp": 622.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css home-content h3:nth-of-type(2) 116 117 118 119 120 121 122 123 124 125 126 127 128 129 AneeEa Jilia home-content { margin-left: Srem; B_ AbH home-content h3 { font-size: 3.7rem; font-weight: 700; home-content h3:nth-of-type(2) { margin-bottom: 2rem; 00^ 0 Ln 128,Col 24 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0101_622.20s.jpg",
+      "change_score": 236.71454716435184
+    },
+    {
+      "index": 102,
+      "timestamp": 632.0,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minusl Explicabo facilis libero repellat dictal CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0102_632.00s.jpg",
+      "change_score": 236.87502893518518
+    },
+    {
+      "index": 103,
+      "timestamp": 634.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css span 122 home-content h3 { 123 Tont-S1ze: 5.rrem; 124 font-weight: 700; 125 126 127 home-content h3:nth-of-type(2) { 128 margin-bottom: 2rem; 129 130 131 span { 132 color: var main-color 133 } B= HbH 00^ 0 Ln 132, Col 29 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0103_634.40s.jpg",
+      "change_score": 235.79850983796297
+    },
+    {
+      "index": 104,
+      "timestamp": 652.4,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit_ At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minusl Explicabo facilis libero repellat dicta) in 0 CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0104_652.40s.jpg",
+      "change_score": 227.6310329861111
+    },
+    {
+      "index": 105,
+      "timestamp": 655.9,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icot 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Monica Taylor Portfolio Brave style.css Portfolio Website Visual Stu__. OBS 30.1.2 Profile: Untitled Scenes: Monicu Taylor Hello, Myself Monica Taylor AndTm Web Developer pellat dician in 0 CV",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0105_655.90s.jpg",
+      "change_score": 75.96297019675926
+    },
+    {
+      "index": 106,
+      "timestamp": 657.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css %s home-content h1 122 home-content h3 { 123 Tont-Size: 5./rem; 124 font-weight: 700; 125 126 127 128 129 Monica Taylor Portfolio Brave 130 131 SF Monicu Taylor 132 133 Hello, Myself 134 Monica Taylor AndTm Web Developer 135 136 137 138 139 Ann Hilaian B AnaH style.css - Portfolio Website Visu_. OBS 30.1.2 Profile: Untitled Scenes: Uo4c 00^ 0 Ln 138, Col 21 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0106_657.30s.jpg",
+      "change_score": 159.50387731481482
+    },
+    {
+      "index": 107,
+      "timestamp": 670.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez home-content p 133 134 135 home-content hl { 136 font-size: 6rem; 137 font-weight: 700; 138 line-height: 1.3; 139 140 141 home-content p 142 font-size: 1.6rem; 143 00^ 0 Ln 142, Col 22 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0107_670.30s.jpg",
+      "change_score": 16.951793981481483
+    },
+    {
+      "index": 108,
+      "timestamp": 673.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css home-content p 133 134 135 home-content hl { 136 font-size: 6rem; 137 font-weight: 700; 138 line-height: 1.3; 139 140 141 home-content p { 142 font-size: 1.6rem; 143 } B; Aebi 00^ 0 Ln 142,Col 22 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0108_673.20s.jpg",
+      "change_score": 227.92494212962964
+    },
+    {
+      "index": 109,
+      "timestamp": 676.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml X style.css scriptjs indexhtml html body section#homehome > divhome-content LT Ci Sci 1Cc5 Toci ViL6S E 25 <a href-\"#testimonial\" >Testimonialk/a> 26 <a href-\"#contact >Contactkla> teGve5 27 Inav> 28 Iheader> 29 30 <! Home Section Code 31 32 <section class= 'home id-\"home 33 (div class= 'home-img' 34 <img src= assets/Profile.jpeg' alt-\"Profile Image 35 <Idiv> 36 37 <div class-\"home-content 38 <h3 Hello, Myself</h3> 39 <hl Monica Taylor</h1>",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0109_676.60s.jpg",
+      "change_score": 31.82150607638889
+    },
+    {
+      "index": 110,
+      "timestamp": 679.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css % 136 font-size: 6rem; 137 font-weight: 700; 138 line-height: 1.3; 139 140 141 home-content p { 142 font-size: 1.6rem; 143 144 145 Ez- Aanbin 014 0 (A) 0 Ln 145,Col 2 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0110_679.90s.jpg",
+      "change_score": 30.86476417824074
+    },
+    {
+      "index": 111,
+      "timestamp": 709.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css %z social-media a 135 home-content hl { 137 tont-weight: 700; 138 line-height: 1.3; 139 140 141 home-content p { 142 font-size: 1.6rem; 143 144 145 social-media K{L 146 display: inline-flex; 147 justify-content: center; 148 align-items: center; 149 width: 42px; 150 height: 42px; 151 background: transparent; 152 border: 0.4; 153 tEa Tz HeHt 00^ 0 Ln 152, Col 16 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0111_709.90s.jpg",
+      "change_score": 0.0
+    },
+    {
+      "index": 112,
+      "timestamp": 715.7,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0112_715.70s.jpg",
+      "change_score": 235.9404224537037
+    },
+    {
+      "index": 113,
+      "timestamp": 718.9,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css Ez social-media a 135 home-content hl { 137 tont-weight: 700; 138 line-height: 1.3; 139 140 141 home-content p { 142 font-size: 1.6rem; 143 144 145 social-media a { 146 display: inline-flex; 147 justify-content: center; 148 align-items: center; 149 width: 42px; 150 height: 42px; 151 background: transparent; 152 border: 0.2rem solid var 153 } E HbH main-color)l 00^ 0 Ln 152, Col 42 Spaces: 4 UTF-8 CRLF CSS Port 5",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0113_718.90s.jpg",
+      "change_score": 235.9919487847222
+    },
+    {
+      "index": 114,
+      "timestamp": 747.4,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez social-media a At 141 home-content p { 142 font-size: 1.6rem; 143 144 145 social-media cubic-bezier(0.075, 0.82, 0.165, 1 146 display: inl cubic-bezier(0.165, 0.84, 0.44, 1) 147 justify-cont cubic-bezier(0.175, 0.885 , 0.32, 1.275) 148 align-items cubic-bezier(0.19, 1, 0.22, 1) 149 width: 42px cubic-bezier(0.215, 0.610, 0.355 , 1) 150 height: 42px cubic-bezier(0.23, 1, 0.320, 1) 151 background: cubic-bezier(0",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0114_747.40s.jpg",
+      "change_score": 23.23972800925926
+    },
+    {
+      "index": 115,
+      "timestamp": 754.2,
+      "ocr_text": "Monica Taylor_ Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0115_754.20s.jpg",
+      "change_score": 235.50595341435186
+    },
+    {
+      "index": 116,
+      "timestamp": 757.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css social-media a A T 141 home-content p { 142 font-size: 1.6rem; 143 144 145 social-media K{L 146 display: inline-flex; 147 justify-content: center; 148 align-items: center; 149 width: 42px; 150 height: 42px; 151 background: transparent; 152 border: 0.2rem solid var( --main-color); 153 border-radius: 50%; 154 font-size: 2rem; 155 color: var( --main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 easel",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0116_757.60s.jpg",
+      "change_score": 226.15447771990742
+    },
+    {
+      "index": 117,
+      "timestamp": 787.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css Ez social-media ahover 145 social-media { EL 7046' TCpr} 151 background: transparent; 152 border: 0.2rem solid var(--main-color) ; 153 border-radius: 50%; 154 font-size: 2rem; 155 color: var(--main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 ease; 158 159 160 social-media a:hover 161 transform: scale(1.2) translateY( - 1Opx) 162 background-color: var ( --main-color); 163 color: 164 T Haai 0 2^ 0",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0117_787.60s.jpg",
+      "change_score": 8.587188946759259
+    },
+    {
+      "index": 118,
+      "timestamp": 791.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez social-media ahover 145 social-media { O 16' TCPn 151 background: transparent; 152 border: 0.2rem solid var( --main-color); 153 border-radius: 50%; 154 font-size: 2rem; 155 color: var( --main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 ease; 158 159 160 social-media a:hover 161 transform: scale(1.2) translateY( -1Opx) 162 background-color: var ( --main-color); 163 color: var(--bg-color); 164 ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0118_791.20s.jpg",
+      "change_score": 16.07892071759259
+    },
+    {
+      "index": 119,
+      "timestamp": 801.4,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Tm a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0119_801.40s.jpg",
+      "change_score": 236.0194950810185
+    },
+    {
+      "index": 120,
+      "timestamp": 808.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css 145 social-media { E 16-6\"' TCp^ 151 background: transparent; 152 border: 0.2rem solid var ( --main-color); 153 border-radius: 50%; 154 font-size: 2rem; 155 color: var( --main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 ease; 158 159 160 social-media a:hover { 161 transform: scale(1.2) translateY( -1Opx) ; 162 background-color: var ( --main-color); 163 color: var(--bg-color); 164 box-shadow 25px",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0120_808.30s.jpg",
+      "change_score": 236.1120949074074
+    },
+    {
+      "index": 121,
+      "timestamp": 809.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml 32 <section class= 'home id-\"home 33 (div class=\"home img\" 34 img src-\"assets/Profile.jpeg' alt-\"Profile Image 35 <Idiv> 36 37 <div class= 'home-content 38 <h3 Hello, Myself</h3> 39 <hl Monica Taylor</hl> 40 <h3>And I'm <span class-\"multiple-text\" >Web Developer<_ 'span></h3 41 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptatum fugit error 42 saepe architecto Officiis quas mi",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0121_809.60s.jpg",
+      "change_score": 28.85179398148148
+    },
+    {
+      "index": 122,
+      "timestamp": 814.0,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0122_814.00s.jpg",
+      "change_score": 226.30635127314815
+    },
+    {
+      "index": 123,
+      "timestamp": 815.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#home.home <html lang= en\" > 12 <body> 32 <section class= 'home id-\"home divhome-content div_ F= atigves7 WE 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 <div class= 'home-content <h3xHello, Myselfk/h3= <hl Monica Taylor</hl> <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ut laudantium voluptat",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0123_815.00s.jpg",
+      "change_score": 235.36576244212964
+    },
+    {
+      "index": 124,
+      "timestamp": 820.0,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs indexhtml html body section#home home divhome-content div_ <div class= 'home-img' <img src-\"assets/Profile. jpeg' alt-\"Profile Image\" <Idiv> Bea 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 eeseLues <div class= 'home-content <h3xHello, Myself</h3> <hlxMonica Taylor</hl> <h3>And I'm <span class-\"multiple-text >Web Developer< span></h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0124_820.00s.jpg",
+      "change_score": 32.08122829861111
+    },
+    {
+      "index": 125,
+      "timestamp": 825.8,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez social-media ahover 153 border-radius: 50%; 154 font-size: 2rem; 155 color: var(--main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 ease; 158 159 160 social-medial a:hover { 161 transform: scale(1.2) translateY( -1Opx) ; 162 background-color: var ( --main-color); 163 color: var(--bg-color); 164 box-shadow 25px var( --main-color); 165 166 167 B= Wbn 014 0 Ln 160, Col 14 (12 selected) Spaces: 4 ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0125_825.80s.jpg",
+      "change_score": 34.43299334490741
+    },
+    {
+      "index": 126,
+      "timestamp": 829.0,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0126_829.00s.jpg",
+      "change_score": 230.9167896412037
+    },
+    {
+      "index": 127,
+      "timestamp": 831.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez btn 145 social-media { 154 font-size: 2rem; 155 color: var( --main-color); 156 margin: 3rem 1.Srem 3rem 0; 157 transition: 0.35 ease; 158 159 160 social-media a:hover { 161 transform: scale(1.2) translateY( -1Opx) ; 162 background-color: var ( --main-color) 163 color: var(--bg-color) 164 box-shadow 25px var( --main-color); 165 166 167 btn { 168 169 } 0 ^ 1 Ln 168, Col 5 Spaces: 4 UTF-8 CRLF CSS Port 5500",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0127_831.30s.jpg",
+      "change_score": 235.3337890625
+    },
+    {
+      "index": 128,
+      "timestamp": 861.3,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css Ez btn 160 161 162 163 164 165 166 167 168 169 170 171 172 173 social-media a:hover { transform: scale(1.2) translateY( -1Opx) ; background-color: var( --main-color); color: var(--bg-color); box-shadow 0 25px var( --main-color); IF Aena btn display: inline-block; padding: lrem 2.8rem; background: var( --main-color); border-radius: 4rem; bottom: border background-color background border-radius box-sizing bottom b",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0128_861.30s.jpg",
+      "change_score": 0.0
+    },
+    {
+      "index": 129,
+      "timestamp": 862.6,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css %z btn 160 161 162 163 164 165 166 167 168 169 170 171 172 173 social-media a:hover { transform: scale(1.2) translateY( -1Opx) ; background-color: var( --main-color) color: var(--bg-color); box-shadow 0 25px var(--main-color); 7 He btn display: inline-block; padding: lrem 2.8rem; background: var( --main-color); border-radius: 4rem; box-shadow: inset none #000 #007f73 #dSfdf9 #fff Ocap Och Ocm Ocqb Ocqh Ocqi Chan",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0129_862.60s.jpg",
+      "change_score": 16.605128761574075
+    },
+    {
+      "index": 130,
+      "timestamp": 868.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css Ez btn 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 social-media a:hover { transform: scale(1.2) translateY( - 1Opx) ; background-color: var( --main-color); color: var(--bg-color); box-shadow 0 25px var( --main-color); 8z Aet btn display: inline-block; padding: lrem 2.8rem; background: var( --main-color); border-radius: 4rem; box-shadow: none; font-size: 0 2 ^ 0 Ln 173,Col 16 Spaces: 4 UTF-8 CRLF ",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0130_868.20s.jpg",
+      "change_score": 15.667447916666667
+    },
+    {
+      "index": 131,
+      "timestamp": 883.7,
+      "ocr_text": "Monica Taylor Portfolio Boxicons Premium web friendly icoi 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit: At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal 127.0.0.1.5500/indexhtml#:",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0131_883.70s.jpg",
+      "change_score": 226.1603804976852
+    },
+    {
+      "index": 132,
+      "timestamp": 885.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.css scriptjs style.css btn 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 social-media a:hover { transform: scale(1.2) translateY( -1Opx) ; background-color: var( --main-color) color: var(--bg-color); box-shadow 0 25px var( --main-color); 7 Hb btn { display: inline-block; padding: lrem 2.8rem; background: var( --main-color); border-radius: 4rem; box-shadow: none; font-size: 1.6rem; color: var(--bg-color); } 0 0 ^ 0 Ta",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0132_885.20s.jpg",
+      "change_score": 235.7720703125
+    },
+    {
+      "index": 133,
+      "timestamp": 913.2,
+      "ocr_text": "File Edit Selection View Go Portfolio Website indexhtml style.csS scriptjs style.css btn:hover 160 social-media hover 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 btn { display: inline-block; padding: lrem 2.8rem; background: var( --main-color); border-radius: 4rem; box-shadow: none; font-size: 1.6rem; color: var(--bg-color); letter-spacing: 0.1rem; font-weight: 600; transition: 0.35 ease; E Hbat btn:hover boxs box-sizing box shadow box lines ~moz-box - sizing f -webki",
+      "audio_context": "",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0133_913.20s.jpg",
+      "change_score": 15.640270543981481
+    },
+    {
+      "index": 134,
+      "timestamp": 922.3,
+      "ocr_text": "Monica Taylor_ Portfolio Boxicons Premium web friendly icor 127.0.0.1.5500/indexhtml Monica Taylor Home About Services Testimonial Contact Hello, Myself Monica Taylor And Im a Web Developer Lorem ipsum dolor sit amet consectetur adipisicing elit At ut laudantium voluptatum fugit error quod saepe architecto officiis quas minus! Explicabo facilis libero repellat dictal",
+      "audio_context": "Thanks for watching the video till the end.",
+      "frame_path": "downloads/frames/ZcW_fbdWRBw/keyframe_0134_922.30s.jpg",
+      "change_score": 227.96527777777777
+    }
+  ]
+}
