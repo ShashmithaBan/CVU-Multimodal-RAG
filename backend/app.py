@@ -387,10 +387,10 @@ YOUR RESPONSE:"""
 # ============================================================================
 # KEYFRAME ALIGNMENT CONFIGURATION
 # ============================================================================
-SCENE_CHANGE_THRESHOLD = 15.0  # Sensitivity for detecting visual changes (lower = more sensitive)
+SCENE_CHANGE_THRESHOLD = 5.0  # Sensitivity for detecting visual changes (lower = more sensitive)
 AUDIO_WINDOW_SECONDS = 5.0     # Seconds before/after keyframe to capture audio
 MIN_KEYFRAME_INTERVAL = 1.0    # Minimum seconds between keyframes (debounce)
-MAX_KEYFRAME_INTERVAL = 30.0   # Maximum seconds without a keyframe (force capture)
+MAX_KEYFRAME_INTERVAL = 10.0   # Maximum seconds without a keyframe (force capture)
 
 
 def download_video(url):
